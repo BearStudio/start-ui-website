@@ -1,8 +1,17 @@
 import { Logo } from '@/components/Logo';
+import { LogoFigma } from '@/components/LogoFigma';
+import { LogoNative } from '@/components/LogoNative';
+import { LogoWeb } from '@/components/LogoWeb';
+import { Metadata } from 'next';
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ReactNode } from 'react';
+
+export const metadata: Metadata = {
+  title: 'Start UI',
+  description: 'Opinionated UI starters from the Bear Studio team',
+};
 
 export default function Home() {
   return (
@@ -26,7 +35,7 @@ function FixedSidebar() {
 
       <div className="flex flex-1 flex-col overflow-y-auto overflow-x-hidden ">
         <div className="relative mx-auto flex max-w-md flex-1 flex-col px-8">
-          <div className="relative flex flex-1 flex-col items-center justify-center gap-4 py-16 text-center [text-wrap:balance]">
+          <div className="relative flex flex-1 flex-col items-center justify-center gap-8 py-16 text-center [text-wrap:balance]">
             <Link href="/">
               <Logo className="w-52" />
             </Link>
@@ -38,6 +47,17 @@ function FixedSidebar() {
                 For web, mobile and design, which lets you easily bootstrap new
                 app UI projects
               </p>
+            </div>
+            <div className="flex items-center justify-center gap-4">
+              <a href="#web">
+                <LogoWeb className="w-52" />
+              </a>
+              <a href="#native">
+                <LogoNative className="w-52" />
+              </a>
+              <a href="#figma">
+                <LogoFigma className="w-52" />
+              </a>
             </div>
           </div>
 
