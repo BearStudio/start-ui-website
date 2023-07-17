@@ -1,25 +1,14 @@
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
+import { ReactNode } from 'react';
 
 export default function Home() {
   return (
     <>
       <FixedSidebar />
-      <div className="relative flex-auto">
-        <main className="space-y-20 py-20 sm:space-y-32 sm:py-32">
-          <div className="mx-auto max-w-7xl px-6 lg:flex lg:px-8">
-            <div className="lg:ml-96 lg:flex lg:w-full lg:justify-end lg:pl-32">
-              <div
-                className={cn(
-                  'mx-auto max-w-lg lg:mx-0 lg:w-0 lg:max-w-xl lg:flex-auto'
-                )}
-              >
-                <h2 className="text-4xl font-bold">Hello</h2>
-              </div>
-            </div>
-          </div>
-        </main>
-      </div>
+      <PageContainer>
+        <h2 className="text-2xl font-bold">Content</h2>
+      </PageContainer>
     </>
   );
 }
@@ -54,6 +43,26 @@ function FixedSidebar() {
           </div>
         </div>
       </div>
+    </div>
+  );
+}
+
+function PageContainer({ children }: { children: ReactNode }) {
+  return (
+    <div className="relative flex-auto">
+      <main className="space-y-20 py-20 sm:space-y-32 sm:py-32">
+        <div className="mx-auto max-w-7xl px-6 lg:flex lg:px-8">
+          <div className="lg:ml-96 lg:flex lg:w-full lg:justify-end lg:pl-32">
+            <div
+              className={cn(
+                'mx-auto max-w-lg lg:mx-0 lg:w-0 lg:max-w-xl lg:flex-auto'
+              )}
+            >
+              {children}
+            </div>
+          </div>
+        </div>
+      </main>
     </div>
   );
 }
