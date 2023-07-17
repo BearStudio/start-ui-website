@@ -17,11 +17,7 @@ export default function Home() {
   return (
     <div className="flex flex-1 flex-col lg:flex-row">
       <FixedSidebar />
-      <PageContainer>
-        <h2 className="text-2xl font-bold" style={{ height: 4000 }}>
-          Content
-        </h2>
-      </PageContainer>
+      <PageContainer>content</PageContainer>
     </div>
   );
 }
@@ -78,7 +74,7 @@ function FixedSidebar() {
 function PageContainer({ children }: { children: ReactNode }) {
   return (
     <div className="relative z-10 flex flex-1 flex-col lg:pl-[36rem]">
-      <div className="relative overflow-hidden">
+      <div className="relative flex-1 overflow-hidden p-8 pb-[200px]">
         <Image
           src="/sticker.png"
           alt="In Open Source We Trust"
