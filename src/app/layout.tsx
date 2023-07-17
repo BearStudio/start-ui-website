@@ -17,7 +17,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={cn(rubikFont.className, 'bg-gray-950 text-white')}>
+      <body
+        className={cn(
+          rubikFont.className,
+          'flex min-h-screen flex-col bg-gray-950 text-white'
+        )}
+      >
         {children}
       </body>
     </html>

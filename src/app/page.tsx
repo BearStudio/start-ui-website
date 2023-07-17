@@ -5,39 +5,45 @@ import { ReactNode } from 'react';
 
 export default function Home() {
   return (
-    <>
+    <div className="flex flex-1 flex-col lg:flex-row">
       <FixedSidebar />
       <PageContainer>
-        <h2 className="text-2xl font-bold">Content</h2>
+        <h2 className="text-2xl font-bold" style={{ height: 4000 }}>
+          Content
+        </h2>
       </PageContainer>
-    </>
+    </div>
   );
 }
 
 function FixedSidebar() {
   return (
-    <div className="relative flex-none overflow-hidden px-6 lg:pointer-events-none lg:fixed lg:inset-0 lg:z-40 lg:flex lg:px-0 ">
-      <div className="relative flex w-full bg-gray-950 lg:pointer-events-auto lg:mr-[calc(max(2rem,50%-38rem)+40rem)] lg:min-w-[32rem] lg:overflow-y-auto lg:overflow-x-hidden lg:pl-[max(4rem,calc(50%-38rem))]">
-        <div className="mx-auto max-w-lg lg:mx-0 lg:flex lg:w-96 lg:max-w-none lg:flex-col lg:before:flex-1 lg:before:pt-6">
-          <div className=" flex flex-col items-center gap-2 pb-16 pt-20 text-center [text-wrap:balance] sm:pb-20 sm:pt-32 lg:py-20">
+    <div className="relative z-10 flex flex-1 flex-col overflow-hidden bg-gray-950 lg:fixed lg:bottom-0 lg:left-0 lg:top-0 lg:w-[36rem]">
+      {/* GRADIENT */}
+      <div className="gradient-text-rgb absolute left-1/2 top-0 h-[300px] w-[300px] -translate-x-1/2 -translate-y-2/3 opacity-60 blur-[80px] lg:left-auto lg:right-0 lg:h-[500px] lg:w-[500px] lg:translate-x-1/2 lg:blur-[100px]" />
+      <div className="gradient-text-rgb absolute bottom-0 left-1/2 h-[300px] w-[300px] -translate-x-1/2 translate-y-2/3 opacity-40 blur-[80px] lg:left-auto lg:right-0 lg:h-[500px] lg:w-[500px] lg:translate-x-1/2 lg:blur-[100px]" />
+
+      <div className="flex flex-1 flex-col overflow-y-auto overflow-x-hidden ">
+        <div className="relative mx-auto flex max-w-md flex-1 flex-col px-8">
+          <div className="relative flex flex-1 flex-col items-center justify-center gap-4 py-16 text-center [text-wrap:balance]">
             <Link href="/">
               <Logo className="w-52" />
             </Link>
-            <div className="flex flex-col">
-              <h1 className="gradient-text-rgb mt-4 bg-clip-text text-3xl/none font-bold text-transparent">
+            <div className="flex flex-col gap-2">
+              <h1 className="gradient-text-rgb bg-clip-text text-3xl font-bold leading-tight text-transparent">
                 Opinionated UI starters
               </h1>
-              <p className="mt-4 text-lg text-gray-300">
+              <p className="text-lg text-white/80">
                 For web, mobile and design, which lets you easily bootstrap new
                 app UI projects
               </p>
             </div>
           </div>
 
-          <div className="flex flex-1 items-end justify-center pb-4 lg:pb-6">
-            <p className="flex items-baseline gap-x-1 text-gray-500">
+          <div className="flex items-center justify-center pb-4 lg:pb-6">
+            <p className="flex items-baseline gap-x-1 text-white/50">
               From the{' '}
-              <Link href="#" className="text-gray-300">
+              <Link href="#" className="text-white/80">
                 BearStudio Team
               </Link>
             </p>
@@ -50,20 +56,8 @@ function FixedSidebar() {
 
 function PageContainer({ children }: { children: ReactNode }) {
   return (
-    <div className="relative flex-auto">
-      <main className="space-y-20 py-20 sm:space-y-32 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:flex lg:px-8">
-          <div className="lg:ml-96 lg:flex lg:w-full lg:justify-end lg:pl-32">
-            <div
-              className={cn(
-                'mx-auto max-w-lg lg:mx-0 lg:w-0 lg:max-w-xl lg:flex-auto'
-              )}
-            >
-              {children}
-            </div>
-          </div>
-        </div>
-      </main>
+    <div className="relative flex flex-1 flex-col lg:pl-[36rem]">
+      {children}
     </div>
   );
 }
