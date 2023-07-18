@@ -15,8 +15,36 @@ import { ReactNode } from 'react';
 import { LuFigma, LuGithub } from 'react-icons/lu';
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://start-ui.com'),
+  alternates: {
+    canonical: '/',
+  },
   title: 'Start UI',
-  description: 'Opinionated UI starters from the Bear Studio team',
+  description: 'Opinionated UI starters from the BearStudio team',
+  keywords: [
+    'Next.js',
+    'React',
+    'BearStudio',
+    'Open Source Starter',
+    'Boilerplate',
+    'TypeScript',
+    'Figma',
+    'Design',
+  ],
+  robots: 'index, follow',
+  twitter: {
+    card: 'summary_large_image',
+    site: '@startui_',
+    creator: '@startui_',
+  },
+  openGraph: {
+    url: 'https://start-ui.com/',
+    type: 'website',
+    locale: 'en_US',
+    siteName: 'Start UI',
+  },
+  colorScheme: 'dark',
+  authors: [{ name: 'BearStudio', url: 'https://bearstudio.fr' }],
 };
 
 export default function Home() {
