@@ -179,7 +179,7 @@ function PageContainer({ children }: { children: ReactNode }) {
           sizes="200px"
           className="absolute -bottom-8 -left-8 z-20 w-[200px] rotate-12 transition-transform hover:-translate-y-4 hover:translate-x-4 sm:max-w-[36vh]"
         />
-        <div className="mx-auto flex max-w-3xl flex-1 flex-col gap-16 px-8 pb-[200px] pt-12 lg:pt-20">
+        <div className="mx-auto flex max-w-3xl flex-1 flex-col gap-16 px-8 pb-[200px] pt-12 lg:pt-20 xl:gap-24">
           {children}
         </div>
       </div>
