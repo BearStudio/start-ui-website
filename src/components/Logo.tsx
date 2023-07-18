@@ -4,9 +4,7 @@ import { SVGProps } from 'react';
 export function Logo(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
-      fill="none"
       viewBox="0 0 512 116"
-      xmlns="http://www.w3.org/2000/svg"
       {...props}
       className={cn('max-w-full', props.className)}
     >

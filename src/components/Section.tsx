@@ -15,7 +15,7 @@ export const Section = ({
   return (
     <article {...props}>
       <div className="mx-auto flex w-full flex-col gap-4 lg:max-w-3xl lg:flex-auto">
-        <h2 className="w-52 rounded-lg">
+        <h2>
           {logo} <span className="sr-only">Start UI {props.id}</span>
         </h2>
         <div className="group relative overflow-hidden rounded-xl dark:bg-gray-900">

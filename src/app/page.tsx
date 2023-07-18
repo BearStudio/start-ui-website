@@ -20,7 +20,7 @@ export default function Home() {
       <FixedSidebar />
       <PageContainer>
         <Section
-          logo={<LogoWeb className="w-72" />}
+          logo={<LogoWeb className="h-8" />}
           id="web"
           imageSrc="/web.jpg"
         >
@@ -60,7 +60,7 @@ export default function Home() {
         </Section>
         <Section
           id="native"
-          logo={<LogoNative className="w-72" />}
+          logo={<LogoNative className="h-8" />}
           imageSrc="/native.jpg"
         >
           <p>
@@ -90,7 +90,7 @@ export default function Home() {
         </Section>
         <Section
           id="figma"
-          logo={<LogoFigma className="w-72" />}
+          logo={<LogoFigma className="h-8" />}
           imageSrc="/figma.jpg"
         >
           <p>
@@ -126,7 +126,7 @@ function FixedSidebar() {
         <div className="relative mx-auto flex max-w-md flex-1 flex-col px-8">
           <div className="relative flex flex-1 flex-col items-center justify-center gap-8 py-16 text-center [text-wrap:balance]">
             <Link href="/">
-              <Logo className="w-52" />
+              <Logo className="h-12" />
             </Link>
             <div className="flex flex-col gap-2">
               <h1 className="gradient-text-rgb bg-clip-text text-3xl font-bold leading-tight text-transparent">
