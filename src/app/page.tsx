@@ -22,9 +22,8 @@ export default function Home() {
         <Section
           logo={<LogoWeb className="w-72" />}
           id="web"
-          imageSrc="/web.png"
+          imageSrc="/web.jpg"
         >
-          <h2 className="text-2xl font-bold">Start UI [web]</h2>
           <p>
             Our free and open source UI web app starter offers a quick and easy
             way to bootstrap your next project. It includes best practices &
@@ -50,19 +49,20 @@ export default function Home() {
             Ready to use with TypeScript, NextJS, Chakra UI, TanStack Query,
             Storybook and more.
           </p>
-          <a
-            href="https://web.start-ui.com/"
-            className="gradient-web inline-flex w-fit items-center gap-x-1.5 rounded-md px-2.5 py-1.5 font-medium text-black shadow-sm"
-          >
-            <LuGithub /> GitHub
-          </a>
+          <div className="not-prose">
+            <a
+              href="https://web.start-ui.com/"
+              className="gradient-web inline-flex w-fit items-center gap-x-1.5 rounded-md px-2.5 py-1.5 font-medium text-black shadow-sm"
+            >
+              <LuGithub /> GitHub
+            </a>
+          </div>
         </Section>
         <Section
           id="native"
           logo={<LogoNative className="w-72" />}
-          imageSrc="/native.png"
+          imageSrc="/native.jpg"
         >
-          <h2 className="text-2xl font-bold">Start UI [native]</h2>
           <p>
             Our free and open source UI native app starter offers a quick and
             easy way to bootstrap your next mobile application. It includes best
@@ -79,19 +79,20 @@ export default function Home() {
             Ready to use with TypeScript, Expo, Magnus UI, TanStack Query,
             Formiz and more.
           </p>
-          <a
-            href="https://native.start-ui.com/"
-            className="gradient-native inline-flex w-fit items-center gap-x-1.5 rounded-md px-2.5 py-1.5 font-medium text-black shadow-sm"
-          >
-            <LuGithub /> GitHub
-          </a>
+          <div className="not-prose">
+            <a
+              href="https://native.start-ui.com/"
+              className="gradient-native inline-flex w-fit items-center gap-x-1.5 rounded-md px-2.5 py-1.5 font-medium text-black shadow-sm"
+            >
+              <LuGithub /> GitHub
+            </a>
+          </div>
         </Section>
         <Section
           id="figma"
           logo={<LogoFigma className="w-72" />}
-          imageSrc="/figma.png"
+          imageSrc="/figma.jpg"
         >
-          <h2 className="text-2xl font-bold">Start UI [figma]</h2>
           <p>
             Quick start designing your app in Figma with already designed &
             developed components from Start UI [web] & [native].
@@ -100,12 +101,14 @@ export default function Home() {
             Auto-layout, Components, Variants, Color Styles, Text, Styles,
             Prototypes and more.
           </p>
-          <a
-            href="https://www.figma.com/community/file/1025698982013308087"
-            className="gradient-figma inline-flex w-fit items-center gap-x-1.5 rounded-md px-2.5 py-1.5 font-medium text-black shadow-sm"
-          >
-            <LuFigma /> Figma
-          </a>
+          <div className="not-prose">
+            <a
+              href="https://www.figma.com/community/file/1025698982013308087"
+              className="gradient-figma inline-flex w-fit items-center gap-x-1.5 rounded-md px-2.5 py-1.5 font-medium text-black shadow-sm"
+            >
+              <LuFigma /> Figma
+            </a>
+          </div>
         </Section>
       </PageContainer>
     </div>
@@ -164,7 +167,7 @@ function FixedSidebar() {
 function PageContainer({ children }: { children: ReactNode }) {
   return (
     <div className="relative z-10 flex flex-1 flex-col lg:pl-[36rem]">
-      <div className="relative flex-1 overflow-hidden pb-[200px]">
+      <div className="relative flex flex-1 flex-col gap-16 overflow-hidden px-8 pb-[200px] pt-12 lg:pt-20">
         <Image
           src="/sticker.png"
           alt="In Open Source We Trust"

@@ -13,6 +13,7 @@ module.exports = {
     },
   },
   plugins: [
+    require('@tailwindcss/typography'),
     plugin(function ({ addComponents }) {
       addComponents({
         '.gradient-text-rgb': {

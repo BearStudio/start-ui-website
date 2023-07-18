@@ -14,23 +14,22 @@ export const Section = ({
 }: SectionProps) => {
   return (
     <article {...props}>
-      <div className="mx-auto flex w-full max-w-xl flex-col gap-4 lg:max-w-3xl lg:flex-auto">
-        <div className="group relative mt-8 overflow-hidden rounded-xl dark:bg-gray-900 [&+*]:mt-8">
-          <div className="mx-auto w-fit blur-[2px] transition duration-300 ease-linear hover:blur-none">
+      <div className="mx-auto flex w-full flex-col gap-4 lg:max-w-3xl lg:flex-auto">
+        <h2 className="w-52 rounded-lg">
+          {logo} <span className="sr-only">Start UI {props.id}</span>
+        </h2>
+        <div className="group relative overflow-hidden rounded-xl dark:bg-gray-900">
+          <div className="mx-auto">
             <Image
               alt=""
-              sizes="(min-width: 1280px) 36rem, (min-width: 1024px) 45vw, (min-width: 640px) 32rem, 95vw"
+              sizes="95vw, (min-width: 640px) 32rem, (min-width: 1024px) 45vw, (min-width: 1280px) 1000px"
               src={imageSrc}
               width="1000"
-              height="1000"
+              height="500"
             />
           </div>
-          <div className="absolute left-1/2 top-1/2 z-20 -translate-x-1/2 rounded-lg bg-black/60 p-2 transition duration-300 ease-linear group-hover:opacity-0">
-            {logo}
-          </div>
-          <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10 dark:ring-white/10"></div>
         </div>
-        {children}
+        <div className="prose prose-invert prose-p:my-3">{children}</div>
       </div>
     </article>
   );
