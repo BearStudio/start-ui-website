@@ -62,8 +62,8 @@ export function LogoNative(props: SVGProps<SVGSVGElement>) {
         fill="white"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M717 27H546C543.239 27 541 29.2386 541 32V84C541 86.7614 543.239 89 546 89H717C719.761 89 722 86.7614 722 84V32C722 29.2386 719.761 27 717 27ZM546 22C540.477 22 536 26.4772 536 32V84C536 89.5229 540.477 94 546 94H717C722.523 94 727 89.5229 727 84V32C727 26.4772 722.523 22 717 22H546Z"
         fill="white"
       />
@@ -76,8 +76,8 @@ export function LogoNative(props: SVGProps<SVGSVGElement>) {
           y2="79.7504"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#7DD3FC" />
-          <stop offset="1" stop-color="#0EA5E9" />
+          <stop stopColor="#7DD3FC" />
+          <stop offset="1" stopColor="#0EA5E9" />
         </linearGradient>
       </defs>
     </svg>

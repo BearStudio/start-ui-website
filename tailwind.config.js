@@ -23,6 +23,15 @@ module.exports = {
           background:
             'linear-gradient(97deg, #FCD34D 23.44%, #FD6243 37.71%, #8364F4 77.08%, #92EFCD 100%)',
         },
+        '.gradient-web': {
+          background: 'linear-gradient(180deg, #FCD34D 0%, #F59E0B 100%)',
+        },
+        '.gradient-native': {
+          background: 'linear-gradient(144deg, #7DD3FC 0%, #0EA5E9 100%)',
+        },
+        '.gradient-figma': {
+          background: 'linear-gradient(153deg, #6EE7B7 0%, #10B981 100%)',
+        },
       });
     }),
   ],

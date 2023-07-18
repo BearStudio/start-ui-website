@@ -2,11 +2,12 @@ import { Logo } from '@/components/Logo';
 import { LogoFigma } from '@/components/LogoFigma';
 import { LogoNative } from '@/components/LogoNative';
 import { LogoWeb } from '@/components/LogoWeb';
+import { Section } from '@/components/Section';
 import { Metadata } from 'next';
-import { cn } from '@/lib/utils';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ReactNode } from 'react';
+import { LuFigma, LuGithub } from 'react-icons/lu';
 
 export const metadata: Metadata = {
   title: 'Start UI',
@@ -17,7 +18,96 @@ export default function Home() {
   return (
     <div className="flex flex-1 flex-col lg:flex-row">
       <FixedSidebar />
-      <PageContainer>content</PageContainer>
+      <PageContainer>
+        <Section
+          logo={<LogoWeb className="w-72" />}
+          id="web"
+          imageSrc="/web.png"
+        >
+          <h2 className="text-2xl font-bold">Start UI [web]</h2>
+          <p>
+            Our free and open source UI web app starter offers a quick and easy
+            way to bootstrap your next project. It includes best practices &
+            production ready tools to help you get started right away, saving
+            you time and effort in the initial setup phase.
+          </p>
+          <p>
+            Comes with built-in features like 🔐 Authentication, 📱Responsive
+            Layout, 🧑‍💻 User Management, 🇫🇷 Internationalization & Right-to-Left
+            support, 🌚 Dark Mode, 🎛 Advanced components for easy development.
+            You can try out the{' '}
+            <a
+              href="https://demo.start-ui.com"
+              target="_blank"
+              rel="noreferrer noopener"
+              className="underline"
+            >
+              example app
+            </a>
+            .
+          </p>
+          <p>
+            Ready to use with TypeScript, NextJS, Chakra UI, TanStack Query,
+            Storybook and more.
+          </p>
+          <a
+            href="https://web.start-ui.com/"
+            className="gradient-web inline-flex w-fit items-center gap-x-1.5 rounded-md px-2.5 py-1.5 font-medium text-black shadow-sm"
+          >
+            <LuGithub /> GitHub
+          </a>
+        </Section>
+        <Section
+          id="native"
+          logo={<LogoNative className="w-72" />}
+          imageSrc="/native.png"
+        >
+          <h2 className="text-2xl font-bold">Start UI [native]</h2>
+          <p>
+            Our free and open source UI native app starter offers a quick and
+            easy way to bootstrap your next mobile application. It includes best
+            practices & production ready tools to help you get started right
+            away, saving you time and effort in the initial setup phase.
+          </p>
+          <p>
+            Comes with built-in features like 🔐 Authentication, 🧑‍💻 User
+            Management, 🇫🇷 Internationalization & Right-to-Left support, 🌚 Dark
+            Mode, 🎛 Advanced components for easy development and 🛠️ Tools to
+            easily deploy to application stores.
+          </p>
+          <p>
+            Ready to use with TypeScript, Expo, Magnus UI, TanStack Query,
+            Formiz and more.
+          </p>
+          <a
+            href="https://native.start-ui.com/"
+            className="gradient-native inline-flex w-fit items-center gap-x-1.5 rounded-md px-2.5 py-1.5 font-medium text-black shadow-sm"
+          >
+            <LuGithub /> GitHub
+          </a>
+        </Section>
+        <Section
+          id="figma"
+          logo={<LogoFigma className="w-72" />}
+          imageSrc="/figma.png"
+        >
+          <h2 className="text-2xl font-bold">Start UI [figma]</h2>
+          <p>
+            Quick start designing your app in Figma with already designed &
+            developed components from Start UI [web] & [native].
+          </p>
+          <p>
+            Auto-layout, Components, Variants, Color Styles, Text, Styles,
+            Prototypes and more.
+          </p>
+          <a
+            href="https://www.figma.com/community/file/1025698982013308087"
+            className="gradient-figma inline-flex w-fit items-center gap-x-1.5 rounded-md px-2.5 py-1.5 font-medium text-black shadow-sm"
+          >
+            <LuFigma /> Figma
+          </a>
+        </Section>
+      </PageContainer>
     </div>
   );
 }
@@ -60,9 +150,9 @@ function FixedSidebar() {
           <div className="flex items-center justify-center pb-4 lg:pb-6">
             <p className="flex items-baseline gap-x-1 text-white/50">
               From the{' '}
-              <Link href="#" className="text-white/80">
+              <a href="https://bearstudio.fr" className="text-white/80">
                 BearStudio Team
-              </Link>
+              </a>
             </p>
           </div>
         </div>
@@ -74,7 +164,7 @@ function FixedSidebar() {
 function PageContainer({ children }: { children: ReactNode }) {
   return (
     <div className="relative z-10 flex flex-1 flex-col lg:pl-[36rem]">
-      <div className="relative flex-1 overflow-hidden p-8 pb-[200px]">
+      <div className="relative flex-1 overflow-hidden pb-[200px]">
         <Image
           src="/sticker.png"
           alt="In Open Source We Trust"

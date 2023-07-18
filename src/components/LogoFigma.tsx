@@ -58,8 +58,8 @@ export function LogoFigma(props: SVGProps<SVGSVGElement>) {
         fill="white"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M700 27H546C543.239 27 541 29.2386 541 32V84C541 86.7614 543.239 89 546 89H700C702.761 89 705 86.7614 705 84V32C705 29.2386 702.761 27 700 27ZM546 22C540.477 22 536 26.4772 536 32V84C536 89.5229 540.477 94 546 94H700C705.523 94 710 89.5229 710 84V32C710 26.4772 705.523 22 700 22H546Z"
         fill="white"
       />
@@ -72,8 +72,8 @@ export function LogoFigma(props: SVGProps<SVGSVGElement>) {
           y2="114.765"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#6EE7B7" />
-          <stop offset="1" stop-color="#10B981" />
+          <stop stopColor="#6EE7B7" />
+          <stop offset="1" stopColor="#10B981" />
         </linearGradient>
       </defs>
     </svg>
