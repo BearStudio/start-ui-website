@@ -4,6 +4,7 @@ import { HTMLAttributes } from 'react';
 
 export type SectionProps = {
   logo: JSX.Element;
+  link: string;
   imageSrc: string;
 } & HTMLAttributes<HTMLElement>;
 
@@ -11,6 +12,8 @@ export const Section = ({
   logo,
   imageSrc,
   children,
+  link,
+  className,
   ...props
 }: SectionProps) => {
   const shadowColor = (() => {
@@ -27,16 +30,16 @@ export const Section = ({
   })();
 
   return (
-    <article
-      {...props}
-      className={cn('flex w-full flex-col gap-3', props.className)}
-    >
+    <article {...props} className={cn('flex w-full flex-col gap-3', className)}>
       <h2 className="relative z-20">
-        {logo} <span className="sr-only">Start UI {props.id}</span>
+        <a href={link}>
+          {logo} <span className="sr-only">Start UI {props.id}</span>
+        </a>
       </h2>
-      <div
+      <a
+        href={link}
         className={cn(
-          'relative z-10 max-w-[1000px] shadow-[0_0_300px_-80px] shadow-white/90 dark:bg-gray-900',
+          'relative z-10 block max-w-[1000px] shadow-[0_0_300px_-80px] shadow-white/90 dark:bg-gray-900',
           shadowColor
         )}
       >
@@ -48,7 +51,7 @@ export const Section = ({
           width="1000"
           height="500"
         />
-      </div>
+      </a>
       <div className="prose prose-invert relative z-20 prose-p:my-3">
         {children}
       </div>

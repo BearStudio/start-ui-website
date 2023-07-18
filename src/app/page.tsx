@@ -20,8 +20,9 @@ export default function Home() {
       <FixedSidebar />
       <PageContainer>
         <Section
-          logo={<LogoWeb className="h-8" />}
           id="web"
+          link="http://web.start-ui.com/"
+          logo={<LogoWeb className="h-8" />}
           imageSrc="/web.jpg"
         >
           <p>
@@ -54,12 +55,13 @@ export default function Home() {
               href="http://web.start-ui.com/"
               className="gradient-web inline-flex w-fit items-center gap-x-1.5 rounded-md px-2.5 py-1.5 font-medium text-black shadow-sm"
             >
-              <LuGithub /> GitHub
+              <LuGithub /> Get on GitHub
             </a>
           </div>
         </Section>
         <Section
           id="native"
+          link="http://native.start-ui.com/"
           logo={<LogoNative className="h-8" />}
           imageSrc="/native.jpg"
         >
@@ -84,12 +86,13 @@ export default function Home() {
               href="http://native.start-ui.com/"
               className="gradient-native inline-flex w-fit items-center gap-x-1.5 rounded-md px-2.5 py-1.5 font-medium text-black shadow-sm"
             >
-              <LuGithub /> GitHub
+              <LuGithub /> Get on GitHub
             </a>
           </div>
         </Section>
         <Section
           id="figma"
+          link="http://figma.start-ui.com/"
           logo={<LogoFigma className="h-8" />}
           imageSrc="/figma.jpg"
         >
@@ -106,7 +109,7 @@ export default function Home() {
               href="http://figma.start-ui.com/"
               className="gradient-figma inline-flex w-fit items-center gap-x-1.5 rounded-md px-2.5 py-1.5 font-medium text-black shadow-sm"
             >
-              <LuFigma /> Figma
+              <LuFigma /> Get on Figma
             </a>
           </div>
         </Section>
