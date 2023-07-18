@@ -40,9 +40,8 @@ export default function Home() {
               href="https://demo.start-ui.com"
               target="_blank"
               rel="noreferrer noopener"
-              className="underline"
             >
-              example app
+              demo app
             </a>
             .
           </p>
