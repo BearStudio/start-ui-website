@@ -2,7 +2,12 @@ import { Logo } from '@/components/Logo';
 import { LogoFigma } from '@/components/LogoFigma';
 import { LogoNative } from '@/components/LogoNative';
 import { LogoWeb } from '@/components/LogoWeb';
-import { Section } from '@/components/Section';
+import {
+  Section,
+  SectionContent,
+  SectionImage,
+  SectionTitle,
+} from '@/components/Section';
 import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -19,98 +24,120 @@ export default function Home() {
     <div className="flex flex-1 flex-col lg:flex-row">
       <FixedSidebar />
       <PageContainer>
-        <Section
-          id="web"
-          link="http://web.start-ui.com/"
-          logo={<LogoWeb className="h-8" />}
-          imageSrc="/web.jpg"
-        >
-          <p>
-            Our free and open source UI web app starter offers a quick and easy
-            way to bootstrap your next project. It includes best practices &
-            production ready tools to help you get started right away, saving
-            you time and effort in the initial setup phase.
-          </p>
-          <p>
-            Comes with built-in features like 🔐 Authentication, 📱Responsive
-            Layout, 🧑‍💻 User Management, 🇫🇷 Internationalization & Right-to-Left
-            support, 🌚 Dark Mode, 🎛 Advanced components for easy development.
-            You can try out the{' '}
-            <a
-              href="https://demo.start-ui.com"
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              demo app
+        <Section id="web">
+          <SectionTitle>
+            <a href="http://web.start-ui.com/">
+              <LogoWeb className="h-8" />
+              <span className="sr-only">Start UI Web</span>
             </a>
-            .
-          </p>
-          <p>
-            Ready to use with TypeScript, NextJS, Chakra UI, TanStack Query,
-            Storybook and more.
-          </p>
-          <div className="not-prose">
-            <a
-              href="http://web.start-ui.com/"
-              className="gradient-web inline-flex w-fit items-center gap-x-1.5 rounded-md px-2.5 py-1.5 font-medium text-black shadow-sm"
-            >
-              <LuGithub /> Get on GitHub
-            </a>
-          </div>
+          </SectionTitle>
+          <SectionImage
+            src="/web.jpg"
+            alt="Start UI Web"
+            href="http://web.start-ui.com/"
+            className="shadow-web-500/30 group-hover:shadow-web-500/40"
+          />
+          <SectionContent>
+            <p>
+              Our free and open source UI web app starter offers a quick and
+              easy way to bootstrap your next project. It includes best
+              practices & production ready tools to help you get started right
+              away, saving you time and effort in the initial setup phase.
+            </p>
+            <p>
+              Comes with built-in features like 🔐 Authentication, 📱Responsive
+              Layout, 🧑‍💻 User Management, 🇫🇷 Internationalization &
+              Right-to-Left support, 🌚 Dark Mode, 🎛 Advanced components for
+              easy development. You can try out the{' '}
+              <a
+                href="https://demo.start-ui.com"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                demo app
+              </a>
+              .
+            </p>
+            <p>
+              Ready to use with TypeScript, NextJS, Chakra UI, TanStack Query,
+              Storybook and more.
+            </p>
+          </SectionContent>
+          <a
+            href="http://web.start-ui.com/"
+            className="gradient-web inline-flex w-fit items-center gap-x-1.5 rounded-md px-2.5 py-1.5 font-medium text-black shadow-sm"
+          >
+            <LuGithub /> Get on GitHub
+          </a>
         </Section>
-        <Section
-          id="native"
-          link="http://native.start-ui.com/"
-          logo={<LogoNative className="h-8" />}
-          imageSrc="/native.jpg"
-        >
-          <p>
-            Our free and open source UI native app starter offers a quick and
-            easy way to bootstrap your next mobile application. It includes best
-            practices & production ready tools to help you get started right
-            away, saving you time and effort in the initial setup phase.
-          </p>
-          <p>
-            Comes with built-in features like 🔐 Authentication, 🧑‍💻 User
-            Management, 🇫🇷 Internationalization & Right-to-Left support, 🌚 Dark
-            Mode, 🎛 Advanced components for easy development and 🛠️ Tools to
-            easily deploy to application stores.
-          </p>
-          <p>
-            Ready to use with TypeScript, Expo, Magnus UI, TanStack Query,
-            Formiz and more.
-          </p>
-          <div className="not-prose">
-            <a
-              href="http://native.start-ui.com/"
-              className="gradient-native inline-flex w-fit items-center gap-x-1.5 rounded-md px-2.5 py-1.5 font-medium text-black shadow-sm"
-            >
-              <LuGithub /> Get on GitHub
+        <Section id="native">
+          <SectionTitle>
+            <a href="http://native.start-ui.com/">
+              <LogoNative className="h-8" />
+              <span className="sr-only">Start UI Native</span>
             </a>
-          </div>
+          </SectionTitle>
+          <SectionImage
+            src="/native.jpg"
+            alt="Start UI Web"
+            href="http://web.start-ui.com/"
+            className="shadow-native-500/30 group-hover:shadow-native-500/40"
+          />
+          <SectionContent>
+            <p>
+              Our free and open source UI native app starter offers a quick and
+              easy way to bootstrap your next mobile application. It includes
+              best practices & production ready tools to help you get started
+              right away, saving you time and effort in the initial setup phase.
+            </p>
+            <p>
+              Comes with built-in features like 🔐 Authentication, 🧑‍💻 User
+              Management, 🇫🇷 Internationalization & Right-to-Left support, 🌚
+              Dark Mode, 🎛 Advanced components for easy development and 🛠️
+              Tools to easily deploy to application stores.
+            </p>
+            <p>
+              Ready to use with TypeScript, Expo, Magnus UI, TanStack Query,
+              Formiz and more.
+            </p>
+          </SectionContent>
+          <a
+            href="http://native.start-ui.com/"
+            className="gradient-native inline-flex w-fit items-center gap-x-1.5 rounded-md px-2.5 py-1.5 font-medium text-black shadow-sm"
+          >
+            <LuGithub /> Get on GitHub
+          </a>
         </Section>
-        <Section
-          id="figma"
-          link="http://figma.start-ui.com/"
-          logo={<LogoFigma className="h-8" />}
-          imageSrc="/figma.jpg"
-        >
-          <p>
-            Quick start designing your app in Figma with already designed &
-            developed components from Start UI [web] & [native].
-          </p>
-          <p>
-            Auto-layout, Components, Variants, Color Styles, Text, Styles,
-            Prototypes and more.
-          </p>
-          <div className="not-prose">
-            <a
-              href="http://figma.start-ui.com/"
-              className="gradient-figma inline-flex w-fit items-center gap-x-1.5 rounded-md px-2.5 py-1.5 font-medium text-black shadow-sm"
-            >
-              <LuFigma /> Get on Figma
+        <Section id="figma">
+          <SectionTitle>
+            <a href="http://figma.start-ui.com/">
+              <LogoFigma className="h-8" />
+              <span className="sr-only">Start UI Web</span>
             </a>
-          </div>
+          </SectionTitle>
+          <SectionImage
+            src="/figma.jpg"
+            alt="Start UI Figma"
+            href="http://figma.start-ui.com/"
+            className="shadow-figma-500/30 group-hover:shadow-figma-500/40"
+          />
+          <SectionContent>
+            {' '}
+            <p>
+              Quick start designing your app in Figma with already designed &
+              developed components from Start UI [web] & [native].
+            </p>
+            <p>
+              Auto-layout, Components, Variants, Color Styles, Text, Styles,
+              Prototypes and more.
+            </p>
+          </SectionContent>
+          <a
+            href="http://figma.start-ui.com/"
+            className="gradient-figma inline-flex w-fit items-center gap-x-1.5 rounded-md px-2.5 py-1.5 font-medium text-black shadow-sm"
+          >
+            <LuFigma /> Get on Figma
+          </a>
         </Section>
       </PageContainer>
     </div>
