@@ -19,18 +19,21 @@ export const Section = ({
   const shadowColor = (() => {
     switch (props.id) {
       case 'web':
-        return 'shadow-web-500';
+        return 'shadow-web-500/30 group-hover:shadow-web-500/40';
       case 'native':
-        return 'shadow-native-500';
+        return 'shadow-native-500/40 group-hover:shadow-native-500/50';
       case 'figma':
-        return 'shadow-figma-500';
+        return 'shadow-figma-500/40 group-hover:shadow-figma-500/50';
       default:
         return '';
     }
   })();
 
   return (
-    <article {...props} className={cn('flex w-full flex-col gap-3', className)}>
+    <article
+      {...props}
+      className={cn('group flex w-full flex-col gap-3', className)}
+    >
       <h2 className="relative z-20">
         <a href={link}>
           {logo} <span className="sr-only">Start UI {props.id}</span>
@@ -39,7 +42,7 @@ export const Section = ({
       <a
         href={link}
         className={cn(
-          'relative z-10 block max-w-[1000px] shadow-[0_0_300px_-80px] shadow-white/90 dark:bg-gray-900',
+          'relative z-10 block max-w-[1000px] rounded-xl shadow-[0_0_300px] shadow-white/90 transition group-hover:shadow-[0_0_300px_20px] dark:bg-gray-900',
           shadowColor
         )}
       >
