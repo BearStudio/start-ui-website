@@ -51,7 +51,7 @@ export default function Home() {
           </p>
           <div className="not-prose">
             <a
-              href="https://web.start-ui.com/"
+              href="http://web.start-ui.com/"
               className="gradient-web inline-flex w-fit items-center gap-x-1.5 rounded-md px-2.5 py-1.5 font-medium text-black shadow-sm"
             >
               <LuGithub /> GitHub
@@ -81,7 +81,7 @@ export default function Home() {
           </p>
           <div className="not-prose">
             <a
-              href="https://native.start-ui.com/"
+              href="http://native.start-ui.com/"
               className="gradient-native inline-flex w-fit items-center gap-x-1.5 rounded-md px-2.5 py-1.5 font-medium text-black shadow-sm"
             >
               <LuGithub /> GitHub
@@ -103,7 +103,7 @@ export default function Home() {
           </p>
           <div className="not-prose">
             <a
-              href="https://www.figma.com/community/file/1025698982013308087"
+              href="http://figma.start-ui.com/"
               className="gradient-figma inline-flex w-fit items-center gap-x-1.5 rounded-md px-2.5 py-1.5 font-medium text-black shadow-sm"
             >
               <LuFigma /> Figma
@@ -167,7 +167,7 @@ function FixedSidebar() {
 function PageContainer({ children }: { children: ReactNode }) {
   return (
     <div className="relative z-10 flex flex-1 flex-col lg:pl-[36rem]">
-      <div className="relative flex flex-1 flex-col gap-16 overflow-hidden px-8 pb-[200px] pt-12 lg:pt-20">
+      <div className="relative flex flex-1 flex-col overflow-hidden">
         <Image
           src="/sticker.png"
           alt="In Open Source We Trust"
@@ -176,7 +176,9 @@ function PageContainer({ children }: { children: ReactNode }) {
           sizes="200px"
           className="absolute -bottom-8 -left-8 z-20 w-[200px] rotate-12 transition-transform hover:-translate-y-4 hover:translate-x-4 sm:max-w-[36vh]"
         />
-        {children}
+        <div className="mx-auto flex max-w-3xl flex-1 flex-col gap-16 px-8 pb-[200px] pt-12 lg:pt-20">
+          {children}
+        </div>
       </div>
     </div>
   );
