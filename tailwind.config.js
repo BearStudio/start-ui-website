@@ -11,6 +11,19 @@ module.exports = {
         '2xl': '1400px',
       },
     },
+    extend: {
+      colors: {
+        web: {
+          500: '#F59E0B',
+        },
+        native: {
+          500: '#0EA5E9',
+        },
+        figma: {
+          500: '#10B981',
+        },
+      },
+    },
   },
   plugins: [
     require('@tailwindcss/typography'),
