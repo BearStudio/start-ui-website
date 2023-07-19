@@ -184,7 +184,7 @@ function FixedSidebar() {
       <div className="flex flex-1 flex-col overflow-y-auto overflow-x-hidden ">
         <div className="relative mx-auto flex max-w-md flex-1 flex-col px-8">
           <div className="relative flex flex-1 flex-col items-center justify-center gap-8 py-16 text-center [text-wrap:balance]">
-            <Link href="/">
+            <Link href="/" aria-label="Go to the website root">
               <Logo className="h-12" />
             </Link>
             <div className="flex flex-col gap-2">
@@ -197,13 +197,16 @@ function FixedSidebar() {
               </p>
             </div>
             <div className="flex items-center justify-center gap-4">
-              <a href="#web">
+              <a href="#web" aria-label="Go to the Start UI [web] section">
                 <LogoWeb className="w-52" />
               </a>
-              <a href="#native">
+              <a
+                href="#native"
+                aria-label="Go to the Start UI [native] section"
+              >
                 <LogoNative className="w-52" />
               </a>
-              <a href="#figma">
+              <a href="#figma" aria-label="Go to the Start UI [figma] section">
                 <LogoFigma className="w-52" />
               </a>
             </div>
