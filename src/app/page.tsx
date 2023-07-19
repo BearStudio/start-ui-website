@@ -86,7 +86,11 @@ export default function Home() {
                 TanStack Query
               </a>
               ,{' '}
-              <a href="" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://storybook.js.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Storybook
               </a>{' '}
               and more.
