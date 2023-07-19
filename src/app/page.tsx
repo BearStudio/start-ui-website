@@ -53,8 +53,43 @@ export default function Home() {
               .
             </p>
             <p>
-              Ready to use with TypeScript, NextJS, Chakra UI, TanStack Query,
-              Storybook and more.
+              Ready to use with{' '}
+              <a
+                href="https://www.typescriptlang.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                TypeScript
+              </a>
+              ,{' '}
+              <a
+                href="https://nextjs.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                NextJS
+              </a>
+              ,{' '}
+              <a
+                href="https://chakra-ui.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Chakra UI
+              </a>
+              ,{' '}
+              <a
+                href="https://tanstack.com/query/latest"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                TanStack Query
+              </a>
+              ,{' '}
+              <a href="" target="_blank" rel="noopener noreferrer">
+                Storybook
+              </a>{' '}
+              and more.
             </p>
           </SectionContent>
           <a
@@ -91,8 +126,47 @@ export default function Home() {
               Tools to easily deploy to application stores.
             </p>
             <p>
-              Ready to use with TypeScript, Expo, Magnus UI, TanStack Query,
-              Formiz and more.
+              Ready to use with{' '}
+              <a
+                href="https://www.typescriptlang.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                TypeScript
+              </a>
+              ,{' '}
+              <a
+                href="https://expo.dev/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Expo
+              </a>
+              ,{' '}
+              <a
+                href="https://magnus-ui.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Magnus UI
+              </a>
+              ,{' '}
+              <a
+                href="https://tanstack.com/query/latest"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                TanStack Query
+              </a>
+              ,{' '}
+              <a
+                href="https://formiz-react.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Formiz
+              </a>{' '}
+              and more.
             </p>
           </SectionContent>
           <a
