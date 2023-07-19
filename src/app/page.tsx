@@ -8,46 +8,10 @@ import {
   SectionImage,
   SectionTitle,
 } from '@/components/Section';
-import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ReactNode } from 'react';
 import { LuFigma, LuGithub } from 'react-icons/lu';
-
-export const metadata: Metadata = {
-  metadataBase: new URL('https://start-ui.com'),
-  alternates: {
-    canonical: '/',
-  },
-  title: 'Start UI',
-  description: 'Opinionated UI starters from the BearStudio team',
-  keywords: [
-    'Next.js',
-    'React',
-    'BearStudio',
-    'Open Source Starter',
-    'Boilerplate',
-    'TypeScript',
-    'Figma',
-    'Design',
-  ],
-  robots: 'index, follow',
-  twitter: {
-    card: 'summary_large_image',
-    site: '@startui_',
-    creator: '@startui_',
-    images: '/start-ui-visual.png',
-  },
-  openGraph: {
-    url: 'https://start-ui.com/',
-    type: 'website',
-    locale: 'en_US',
-    siteName: 'Start UI',
-    images: '/start-ui-visual.png',
-  },
-  colorScheme: 'dark',
-  authors: [{ name: 'BearStudio', url: 'https://bearstudio.fr' }],
-};
 
 export default function Home() {
   return (
@@ -181,7 +145,7 @@ function FixedSidebar() {
       <div className="gradient-text-rgb absolute left-1/2 top-0 h-[300px] w-[300px] -translate-x-1/2 -translate-y-2/3 opacity-60 blur-[80px] lg:left-auto lg:right-0 lg:h-[500px] lg:w-[500px] lg:translate-x-1/2 lg:blur-[100px]" />
       <div className="gradient-text-rgb absolute bottom-0 left-1/2 h-[300px] w-[300px] -translate-x-1/2 translate-y-2/3 opacity-40 blur-[80px] lg:left-auto lg:right-0 lg:h-[500px] lg:w-[500px] lg:translate-x-1/2 lg:blur-[100px]" />
 
-      <div className="flex flex-1 flex-col overflow-y-auto overflow-x-hidden ">
+      <div className="flex flex-1 flex-col overflow-y-auto overflow-x-hidden">
         <div className="relative mx-auto flex max-w-md flex-1 flex-col px-8">
           <div className="relative flex flex-1 flex-col items-center justify-center gap-8 py-16 text-center [text-wrap:balance]">
             <Link href="/" aria-label="Go to the website root">
