@@ -1,5 +1,5 @@
 <h1 align="center">
-  <a href="https://github.com/dec0dOS/amazing-github-template" >
+  <a href="https://start-ui.com" >
     <img src="public/start-ui-visual.png" alt="Logo" width="640">
   </a>
 </h1>
