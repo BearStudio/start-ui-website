@@ -2,6 +2,7 @@ import { cn } from '@/lib/utils';
 import './globals.css';
 import type { Metadata } from 'next';
 import { Rubik } from 'next/font/google';
+import { Analytics } from '@vercel/analytics/react';
 
 const rubikFont = Rubik({ subsets: ['latin'] });
 
@@ -24,6 +25,7 @@ export default function RootLayout({
         )}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );
