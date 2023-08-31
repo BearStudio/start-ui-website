@@ -35,6 +35,7 @@ export const SectionImage = (props: SectionImageProps) => {
   return (
     <a
       href={props.href}
+      target="_blank"
       className={cn(
         'relative z-10 block max-w-[1000px] rounded-xl shadow-[0_0_300px] shadow-white/90 transition group-hover:shadow-[0_0_300px_20px] dark:bg-gray-900',
         props.className
