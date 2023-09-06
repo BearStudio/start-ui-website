@@ -327,7 +327,7 @@ const Testimonials = () => {
             }}
           >
             <div
-              className="animate-slow-rotation gradient-text-rgb absolute inset-0 aspect-[1097/845] w-[68.5625rem] transition"
+              className="animate-slow-rotation gradient-text-rgb absolute inset-0 aspect-[1097/845] w-[68.5625rem] transition motion-reduce:animate-none"
               style={{ transitionTimingFunction: 'ease-in-out' }}
             />
           </div>
@@ -404,7 +404,7 @@ const Testimonials = () => {
             }}
           >
             <div
-              className="animate-slower-rotation gradient-text-rgb absolute inset-0 aspect-[1097/845] w-[68.5625rem] transition"
+              className="animate-slower-rotation gradient-text-rgb absolute inset-0 aspect-[1097/845] w-[68.5625rem] transition motion-reduce:animate-none"
               style={{ transitionTimingFunction: 'ease-in-out' }}
             />
           </div>
