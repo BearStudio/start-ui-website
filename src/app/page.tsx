@@ -229,7 +229,7 @@ export default function Home() {
           </a>
         </Section>
 
-        <Testimonial />
+        <Testimonials />
       </PageContainer>
     </div>
   );
@@ -307,9 +307,12 @@ function PageContainer({ children }: { children: ReactNode }) {
   );
 }
 
-const Testimonial = () => {
+const Testimonials = () => {
   return (
-    <div className="group relative">
+    <div className="group relative space-y-6">
+      <h2 className="text-lg md:text-2xl">
+        Improving developers and designers experiences worldwide:
+      </h2>
       <div className="relative z-10 overflow-hidden rounded-xl border border-gray-800 bg-gray-700 px-8 py-8 shadow-2xl sm:px-20 sm:py-16 lg:px-12 xl:px-20">
         <div className="absolute -inset-1 bg-gray-700/90 mix-blend-multiply" />
         <div
@@ -381,6 +384,77 @@ const Testimonial = () => {
                   className="text-xs"
                 >
                   Faraday
+                </a>
+              </div>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+      <div className="relative z-10 overflow-hidden rounded-xl border border-gray-800 bg-gray-700 px-8 py-8 shadow-2xl sm:px-20 sm:py-16 lg:px-12 xl:px-20">
+        <div className="absolute -inset-1 bg-gray-700/90 mix-blend-multiply" />
+        <div
+          className="absolute -left-10 -top-56 rotate-180 transform-gpu blur-3xl"
+          aria-hidden="true"
+        >
+          <div
+            className="relative aspect-[1097/845] w-[68.5625rem] opacity-30"
+            style={{
+              clipPath:
+                'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
+            }}
+          >
+            <div
+              className="animate-slower-rotation gradient-text-rgb absolute inset-0 aspect-[1097/845] w-[68.5625rem] transition"
+              style={{ transitionTimingFunction: 'ease-in-out' }}
+            />
+          </div>
+        </div>
+        <div className="relative">
+          <figure className="flex flex-col space-y-4">
+            <blockquote className="text-base italic text-white">
+              <p>
+                We used &quot;Start UI&quot; to bootstrap a React project
+                quickly rather than going through the process of setting up the
+                frontend stack (UI, API client, Tests, Design system, and so
+                on). It is a good boilerplate for fast setup. It is opinionated
+                but knowing that the people in charge of this project do a great
+                job at testing/validating libraries, we were really confident.
+                Another important thing about &quot;Start UI&quot; is that it
+                doesn&apos;t lock you up as you can remove everything you
+                don&apos;t need and change which library you want for another. I
+                will use it again for future projects for sure.
+              </p>
+            </blockquote>
+            <figcaption className="flex items-center space-x-3 text-white">
+              <a
+                href="https://github.com/cdue"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                <Image
+                  className="inline-block h-12 w-12 rounded-full border border-gray-900"
+                  width={200}
+                  height={200}
+                  src="https://avatars.githubusercontent.com/u/7940852?s=64&v=4"
+                  alt=""
+                />
+              </a>
+              <div className="flex flex-col space-y-1">
+                <a
+                  href="https://github.com/cdue"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="text-base font-semibold"
+                >
+                  Cédric Dué
+                </a>
+                <a
+                  className="text-xs"
+                  href="https://www.ysely.io/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  Ysely
                 </a>
               </div>
             </figcaption>

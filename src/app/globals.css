@@ -6,6 +6,10 @@
   animation: rotation 10s infinite linear;
 }
 
+.animate-slower-rotation {
+  animation: rotation 15s infinite linear;
+}
+
 @keyframes rotation {
   0% {
     transform: rotate(0);
