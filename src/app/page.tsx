@@ -210,7 +210,6 @@ export default function Home() {
             className="shadow-figma-500/30 group-hover:shadow-figma-500/40"
           />
           <SectionContent>
-            {' '}
             <p>
               Quick start designing your app in Figma with already designed &
               developed components from Start UI [web] & [native].

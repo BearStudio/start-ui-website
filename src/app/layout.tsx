@@ -1,6 +1,6 @@
 import { cn } from '@/lib/utils';
 import './globals.css';
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Rubik } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/react';
 
@@ -38,9 +38,12 @@ export const metadata: Metadata = {
     siteName: 'Start UI',
     images: '/start-ui-visual.png',
   },
-  colorScheme: 'dark',
   authors: [{ name: 'BearStudio', url: 'https://bearstudio.fr' }],
 };
+
+export const viewport: Viewport = {
+  colorScheme: 'dark',
+}
 
 export default function RootLayout({
   children,
