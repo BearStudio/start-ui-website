@@ -139,10 +139,8 @@ export default function Home() {
               right away, saving you time and effort in the initial setup phase.
             </p>
             <p>
-              Comes with built-in features like 🔐 Authentication, 🧑‍💻 User
-              Management, 🇫🇷 Internationalization & Right-to-Left support, 🌚
-              Dark Mode, 🎛 Advanced components for easy development and 🛠️
-              Tools to easily deploy to application stores.
+              Comes with built-in features like 🔐 Authentication, 🌚 Dark Mode,
+              🛠️ Tooling to easily deploy to application stores.
             </p>
             <p>
               Ready to use with{' '}
@@ -163,19 +161,19 @@ export default function Home() {
               </a>
               ,{' '}
               <a
-                href="https://magnus-ui.com/"
+                href="https://ficus-ui.com/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Magnus UI
+                Ficus UI
               </a>
               ,{' '}
               <a
                 target="_blank"
-                href="https://tanstack.com/query/latest"
+                href="https://www.zodios.org/"
                 rel="noopener noreferrer"
               >
-                TanStack Query
+                Zodios
               </a>
               ,{' '}
               <a
