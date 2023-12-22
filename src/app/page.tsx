@@ -68,6 +68,14 @@ export default function Home() {
               </a>
               ,{' '}
               <a
+                href="https://react.dev/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                React
+              </a>
+              ,{' '}
+              <a
                 href="https://nextjs.org/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -84,6 +92,22 @@ export default function Home() {
               </a>
               ,{' '}
               <a
+                href="https://trpc.io/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                tRPC
+              </a>
+              ,{' '}
+              <a
+                href="https://www.prisma.io/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Prisma
+              </a>
+              ,{' '}
+              <a
                 href="https://tanstack.com/query/latest"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -97,8 +121,40 @@ export default function Home() {
                 rel="noopener noreferrer"
               >
                 Storybook
-              </a>{' '}
-              and more.
+              </a>
+              ,{' '}
+              <a
+                href="https://playwright.dev/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Playwright
+              </a>
+              ,{' '}
+              <a
+                href="https://formiz-react.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Formiz
+              </a>
+              ,{' '}
+              <a
+                href="https://react.i18next.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                React i18next
+              </a>
+              ,{' '}
+              <a
+                href="https://react.email/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                React Email
+              </a>
+              , and more.
             </p>
           </SectionContent>
           <div className="flex space-x-4">
