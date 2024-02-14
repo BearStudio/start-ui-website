@@ -288,7 +288,7 @@ export default function Home() {
   );
 }
 
-function FixedSidebar() {
+export function FixedSidebar() {
   return (
     <div className="relative z-20 flex min-h-[90vh] flex-1 flex-col overflow-hidden bg-gray-950 lg:fixed lg:bottom-0 lg:left-0 lg:top-0 lg:w-[36rem]">
       {/* GRADIENT */}
@@ -340,7 +340,7 @@ function FixedSidebar() {
   );
 }
 
-function PageContainer({ children }: { children: ReactNode }) {
+export function PageContainer({ children }: { children: ReactNode }) {
   return (
     <div className="relative z-10 flex flex-1 flex-col lg:pl-[36rem]">
       <div className="relative flex flex-1 flex-col overflow-hidden">
