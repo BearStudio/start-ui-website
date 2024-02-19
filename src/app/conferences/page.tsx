@@ -6,100 +6,111 @@ import {
   SectionImage,
   SectionTitle,
 } from '@/components/Section';
-import { LuGithub, LuPlayCircle, LuMapPin, LuYoutube } from 'react-icons/lu';
+import { LuMapPin, LuYoutube } from 'react-icons/lu';
 import Image from 'next/image';
+import { cn } from '@/lib/utils';
 const confList = [
   {
-    title: 'Rouen,France',
-    description:
-      '  Our free and open source UI web app starter offers a quick and easy way to bootstrap your next project. It includes best practices & production ready tools to help you get started right away, saving you time and effort in the initial setup phase.',
-    animepar: [
+    city: 'Lyon, France',
+    description: 'Meetup LyonJS',
+    animatedby: [
       {
         name: 'Ivan Dalmet',
         picture: 'https://avatars.githubusercontent.com/u/9749061?v=4',
         role: 'Co-founder - Lead Designer',
+        profile: 'https://www.bearstudio.fr/team/ivan-dalmet',
       },
       {
-        name: 'Quentin',
+        name: 'Yoann Fleury',
+        picture: 'https://avatars.githubusercontent.com/u/3920615?v=4',
+        role: 'Lead Front End, Streamer, Marketing',
+        profile: 'https://www.bearstudio.fr/team/yoann-fleury',
+      },
+    ],
+    image: '/Lyon.jpg',
+    date: 'October 11, 2023',
+    video: 'https://www.youtube.com/watch?v=kJAH7dtytxM',
+  },
+  {
+    city: 'Brussels, Belgium',
+    description: 'Meetup BeJs ',
+    animatedby: [
+      {
+        name: 'Ivan Dalmet',
+        picture: 'https://avatars.githubusercontent.com/u/9749061?v=4',
+        role: 'Co-founder - Lead Designer',
+        profile: 'https://www.bearstudio.fr/team/ivan-dalmet',
+      },
+      {
+        name: 'Fabien Essid',
+        picture: 'https://avatars.githubusercontent.com/u/50022361?v=4',
+        role: 'Front-End Developer',
+        profile: 'https://www.bearstudio.fr/team/fabien-essid',
+      },
+    ],
+    image: '/Bruxelles.jpg',
+    date: 'September 6, 2023',
+  },
+  {
+    city: 'Bordeaux, France',
+    description: 'Meetup BordeauxJS',
+    animatedby: [
+      {
+        name: 'Hugo Pérard',
+        picture: 'https://avatars.githubusercontent.com/u/48803115?v=4',
+        role: 'Front Developer',
+        profile: 'https://www.bearstudio.fr/team/hugo-perard',
+      },
+      {
+        name: 'Quentin Lerebours',
         picture: 'https://avatars.githubusercontent.com/u/27200095?v=4',
         role: 'Full Stack Developer',
+        profile: 'https://www.bearstudio.fr/team/quentin-lerebours',
+      },
+    ],
+    image: '/Bordeaux.jpeg',
+    date: 'July 11, 2023',
+  },
+  {
+    city: 'Nantes, France',
+    description: 'Meetup NantesJs',
+    animatedby: [
+      {
+        name: 'Hugo Pérard',
+        picture: 'https://avatars.githubusercontent.com/u/48803115?v=4',
+        role: 'Front Developer',
+        profile: 'https://www.bearstudio.fr/team/hugo-perard',
+      },
+      {
+        name: 'Yoann Fleury',
+        picture: 'https://avatars.githubusercontent.com/u/3920615?v=4',
+        role: 'Lead Front End, Streamer, Marketing',
+        profile: 'https://www.bearstudio.fr/team/yoann-fleury',
+      },
+    ],
+    image: '/Nantes.jpg',
+    date: 'Mars 16, 2023',
+  },
+  {
+    city: 'Rouen, France',
+    description: 'Codeurs en Seine',
+    animatedby: [
+      {
+        name: 'Ivan Dalmet',
+        picture: 'https://avatars.githubusercontent.com/u/9749061?v=4',
+        role: 'Co-founder - Lead Designer',
+        profile: 'https://www.bearstudio.fr/team/ivan-dalmet',
+      },
+      {
+        name: 'Quentin Lerebours',
+        picture: 'https://avatars.githubusercontent.com/u/27200095?v=4',
+        role: 'Full Stack Developer',
+        profile: 'https://www.bearstudio.fr/team/quentin-lerebours',
       },
     ],
     image: '/rouen.jpg',
     video: 'https://www.youtube.com/watch?v=5yk34hF40Ok',
-    date: '17 November 2022',
-  },
-
-  {
-    title: 'Nantes,France',
-    description:
-      '  Our free and open source UI web app starter offers a quick and easy way to bootstrap your next project. It includes best practices & production ready tools to help you get started right away, saving you time and effort in the initial setup phase.',
-
-    animepar: [
-      {
-        name: 'Hugo Pérard',
-        picture: 'https://avatars.githubusercontent.com/u/48803115?v=4',
-        role: 'Front developer',
-      },
-      {
-        name: 'Yoann Fleury',
-        picture: 'https://avatars.githubusercontent.com/u/3920615?v=4',
-        role: 'Lead Front End, Streamer, Marketing, SST, Suppléant CSE',
-      },
-    ],
-    image: '/Nantes.jpg',
-    date: '16 Mars 2023',
-  },
-  {
-    title: 'Lyon,France',
-    description:
-      '  Our free and open source UI web app starter offers a quick and easy way to bootstrap your next project. It includes best practices & production ready tools to help you get started right away, saving you time and effort in the initial setup phase.',
-
-    animepar: [
-      {
-        name: 'Ivan Dalmet',
-        picture: 'https://avatars.githubusercontent.com/u/9749061?v=4',
-        role: 'Co-founder - Lead Designer',
-      },
-      {
-        name: 'Yoann Fleury',
-        picture: 'https://avatars.githubusercontent.com/u/3920615?v=4',
-        role: 'Lead Front End, Streamer, Marketing, SST, Suppléant CSE',
-      },
-      {
-        name: 'Quentin',
-        picture: 'https://avatars.githubusercontent.com/u/27200095?v=4',
-        role: 'Full Stack Developer',
-      },
-    ],
-    image: '/Lyon.jpg',
-    date: '11 October 2023',
-  },
-
-  {
-    title: 'Bordeaux,France',
-    description:
-      '  Our free and open source UI web app starter offers a quick and easy way to bootstrap your next project. It includes best practices & production ready tools to help you get started right away, saving you time and effort in the initial setup phase.',
-
-    /*  animepar: 'Ivan Quentin Yoann', */
-    animepar: [
-      {
-        name: 'Ivan Dalmet',
-        picture: 'https://avatars.githubusercontent.com/u/9749061?v=4',
-        role: 'Co-founder - Lead Designer',
-      },
-      {
-        name: 'Yoann Fleury',
-        picture: 'https://avatars.githubusercontent.com/u/3920615?v=4',
-        role: 'Lead Front End, Streamer, Marketing, SST, Suppléant CSE',
-      },
-      {
-        name: 'Quentin',
-        picture: 'https://avatars.githubusercontent.com/u/27200095?v=4',
-        role: 'Full Stack Developer',
-      },
-    ],
-    image: '/Nantes.jpg',
+    date: 'November 17, 2022',
   },
 ];
 const Coneferences = () => {
@@ -108,64 +119,77 @@ const Coneferences = () => {
       <FixedSidebar />
       <PageContainer>
         {confList.map((conf) => (
-          <Section id="web" key={conf.title}>
+          <Section id="web" key={conf.date}>
             <SectionTitle>
-              <a className="flex items-start gap-1 text-3xl">
-                {conf.title}
-                <LuMapPin size={30} />
-
+              <a className="flex items-start gap-1 text-2xl">
+                {conf.description}
                 <span className="sr-only">le starter dont je suis le héro</span>
               </a>
-              <p>{conf.date}</p>
             </SectionTitle>
-            <SectionImage
-              src={conf.image}
-              alt="Start UI Web"
-              href="http://web.start-ui.com/"
-              className="h-auto shadow-web-500/30 group-hover:shadow-web-500/40"
-            />
-            <SectionContent>
+            <a
+              className={cn(
+                'relative z-10 block h-auto max-w-[1000px] rounded-xl shadow-[0_0_300px] shadow-web-500/30    dark:bg-gray-900'
+              )}
+            >
+              <Image
+                className="rounded-xl shadow-2xl shadow-black/50"
+                alt="Event Image"
+                sizes="95vw, (min-width: 640px) 32rem, (min-width: 1024px) 45vw, (min-width: 1280px) 1000px"
+                src={conf.image}
+                width="1000"
+                height="500"
+              />
+            </a>
+            <div className="prose-invert relative  prose-p:my-1">
+              {/*               <p>Organized By: {conf.organisedby}</p>
+               */}{' '}
+              {/*  <p>HostedBy : hosted by Le Wagon Belgium - Brussels</p> */}
               <p>
-                Our free and open source UI web app starter offers a quick and
-                easy way to bootstrap your next project. It includes best
-                practices & production ready tools to help you get started right
-                away, saving you time and effort in the initial setup phase.
+                <span>City :</span> {conf.city}
               </p>
-              Animé par :
-              <div className="grid grid-cols-2 ">
-                {conf.animepar.map((person) => (
+              <p>Date : {conf.date} </p>
+              Presented by :
+              <div className=" mt-5 grid grid-cols-2 gap-8">
+                {conf.animatedby.map((person) => (
                   <div
                     className="flex w-full items-center space-x-5 "
-                    key={conf.title}
+                    key={conf.date}
                   >
-                    <Image
-                      height={500}
-                      width={500}
-                      className="inline-block h-12 w-12 rounded-full"
-                      src={person.picture}
-                      alt=""
-                    />
-                    <div className="items-center leading-none">
+                    <a
+                      href={person.profile}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Image
+                        height={500}
+                        width={500}
+                        className="inline-block h-12 w-12 rounded-full"
+                        src={person.picture}
+                        alt=""
+                      />
+                    </a>
+                    <div className="items-center  leading-none">
                       <p>{person.name}</p>
-                      <p className="text-sm text-gray-500">{person.role}</p>
+                      <p className=" text-sm text-gray-500">{person.role}</p>
                     </div>
                   </div>
                 ))}
               </div>
-            </SectionContent>
+            </div>
             {conf.video && (
-              <div className="flex space-x-4">
+              <div className="mt-5 flex space-x-4">
                 <a
                   target="_blank"
                   href={conf.video}
                   className="gradient-youtube inline-flex w-fit items-center gap-x-1.5 rounded-md px-2.5 py-1.5 font-medium text-white shadow-sm"
                 >
-                  <LuYoutube /> Watch
+                  <LuYoutube /> Replay
                 </a>
               </div>
             )}
           </Section>
         ))}
+        <section></section>
       </PageContainer>
     </div>
   );
