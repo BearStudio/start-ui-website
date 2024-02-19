@@ -16,6 +16,7 @@ import {
   LuFigma,
   LuGithub,
   LuPlayCircle,
+  LuMic2,
 } from 'react-icons/lu';
 
 export default function Home() {
@@ -281,7 +282,52 @@ export default function Home() {
             <LuFigma /> Get on Figma
           </a>
         </Section>
+        <Section id="Talk">
+          <SectionTitle>
+            <p className="text-xl">Our Talk</p>
+          </SectionTitle>
+          <SectionImage
+            src="/Talk.jpg"
+            alt="Start UI Web"
+            href="http://web.start-ui.com/"
+            className="shadow-web-500/30 group-hover:shadow-web-500/40"
+          />
+          <SectionContent>
+            <p>
+              <a>Le Starter dont je suis le héros</a> is the name of our Start
+              UI conference, where we discuss the ins and outs of Start UI. We
+              share our technical choices and the best practices we&apos;ve
+              implemented in our web application starter, 🚀 Start UI, which has
+              accumulated over 1300 stars. Our journey is the result of years of
+              experimentation across different projects, where we&apos;ve
+              cherry-picked the most effective strategies.
+            </p>
+            <div className="flex flex-row space-x-4">
+              <span className="inline-flex items-center rounded-md bg-yellow-50 px-2 py-1 text-xs font-medium text-yellow-800 ring-1 ring-inset ring-yellow-600/20">
+                StartUI Conference
+              </span>
 
+              <span className="inline-flex items-center rounded-md bg-indigo-50 px-2 py-1 text-xs font-medium text-indigo-700 ring-1 ring-inset ring-indigo-700/10">
+                Technical Choices
+              </span>
+              <span className="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10">
+                Tech Talks
+              </span>
+              <span className="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
+                Web Applications
+              </span>
+            </div>
+          </SectionContent>
+          <div className="flex space-x-4">
+            <Link
+              href="/conferences"
+              className="gradient-web inline-flex w-fit items-center gap-x-1.5 rounded-md px-2.5 py-1.5 font-medium text-black shadow-sm"
+            >
+              <LuMic2 />
+              Previous Conferences
+            </Link>
+          </div>
+        </Section>
         <Testimonials />
       </PageContainer>
     </div>
