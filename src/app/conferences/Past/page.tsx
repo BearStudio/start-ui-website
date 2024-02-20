@@ -7,7 +7,7 @@ import { cn } from '@/lib/utils';
 import Link from 'next/link';
 const confList = [
   {
-    city: 'Lyon, France',
+    city: 'Lyon, France 🇫🇷',
     description: 'Meetup LyonJS',
     animatedby: [
       {
@@ -28,7 +28,7 @@ const confList = [
     video: 'https://www.youtube.com/watch?v=kJAH7dtytxM',
   },
   {
-    city: 'Brussels, Belgium',
+    city: 'Brussels, Belgium 🇧🇪',
     description: 'Meetup BeJs ',
     animatedby: [
       {
@@ -48,7 +48,7 @@ const confList = [
     date: 'September 6, 2023',
   },
   {
-    city: 'Bordeaux, France',
+    city: 'Bordeaux, France 🇫🇷',
     description: 'Meetup BordeauxJS',
     animatedby: [
       {
@@ -68,7 +68,7 @@ const confList = [
     date: 'July 11, 2023',
   },
   {
-    city: 'Nantes, France',
+    city: 'Nantes, France 🇫🇷',
     description: 'Meetup NantesJs',
     animatedby: [
       {
@@ -88,8 +88,8 @@ const confList = [
     date: 'Mars 16, 2023',
   },
   {
-    city: 'Rouen, France',
-    description: 'Codeurs en Seine',
+    city: 'Rouen, France 🇫🇷',
+    description: ' Meetup Codeurs en Seine',
     animatedby: [
       {
         name: 'Ivan Dalmet',
@@ -126,7 +126,7 @@ const PastConeferences = () => {
           {confList.map((conf) => (
             <Section id="web" key={conf.date}>
               <SectionTitle>
-                <a className="flex items-start gap-1 text-2xl">
+                <a className="flex items-start gap-1 text-xl">
                   {conf.description}
                   <span className="sr-only">
                     le starter dont je suis le héro
