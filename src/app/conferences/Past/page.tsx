@@ -1,12 +1,7 @@
 import React from 'react';
-import { FixedSidebar, PageContainer } from '../page';
-import {
-  Section,
-  SectionContent,
-  SectionImage,
-  SectionTitle,
-} from '@/components/Section';
-import { LuArrowLeft, LuArrowRight, LuMapPin, LuYoutube } from 'react-icons/lu';
+import { FixedSidebar, PageContainer } from '../../page';
+import { Section, SectionTitle } from '@/components/Section';
+import { LuArrowLeft, LuYoutube } from 'react-icons/lu';
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
@@ -114,20 +109,19 @@ const confList = [
     date: 'November 17, 2022',
   },
 ];
-const Coneferences = () => {
+const PastConeferences = () => {
   return (
     <div className="flex flex-1 flex-col lg:flex-row">
       <FixedSidebar />
       <PageContainer>
-        <div className="flex justify-between">
-          <Link
-            href="/"
-            className="inline-flex w-fit items-center gap-x-1.5 rounded-md bg-gray-200 px-2.5 py-1.5 font-medium text-black shadow-sm"
-          >
-            <LuArrowLeft className="-ml-0.5 h-5 w-5" aria-hidden="true" />
-            Go back
-          </Link>
-        </div>
+        <Link
+          href="/"
+          className="inline-flex w-fit items-center gap-x-1.5 rounded-md bg-gray-200 px-2.5 py-1.5 font-medium text-black shadow-sm "
+        >
+          <LuArrowLeft className="-ml-0.5 h-5 w-5" aria-hidden="true" />
+          Go back
+        </Link>
+
         <Section className="gap-24" id="conferences">
           {confList.map((conf) => (
             <Section id="web" key={conf.date}>
@@ -139,7 +133,7 @@ const Coneferences = () => {
                   </span>
                 </a>
               </SectionTitle>
-              <a
+              <div
                 className={cn(
                   'relative z-10 block h-auto max-w-[1000px] rounded-xl shadow-[0_0_300px] shadow-web-500/30    dark:bg-gray-900'
                 )}
@@ -152,11 +146,8 @@ const Coneferences = () => {
                   width="1000"
                   height="500"
                 />
-              </a>
+              </div>
               <div className="prose-invert relative  prose-p:my-1">
-                {/*               <p>Organized By: {conf.organisedby}</p>
-                 */}{' '}
-                {/*  <p>HostedBy : hosted by Le Wagon Belgium - Brussels</p> */}
                 <p>
                   <span>City :</span> {conf.city}
                 </p>
@@ -208,4 +199,4 @@ const Coneferences = () => {
   );
 };
 
-export default Coneferences;
+export default PastConeferences;

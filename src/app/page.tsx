@@ -8,6 +8,7 @@ import {
   SectionImage,
   SectionTitle,
 } from '@/components/Section';
+import { cn } from '@/lib/utils';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ReactNode } from 'react';
@@ -286,12 +287,20 @@ export default function Home() {
           <SectionTitle>
             <p className="text-xl">Our Talk</p>
           </SectionTitle>
-          <SectionImage
-            src="/Talk.jpg"
-            alt="Start UI Web"
-            href="http://web.start-ui.com/"
-            className="shadow-talk-500/30 group-hover:shadow-talk-500/40"
-          />
+          <div
+            className={cn(
+              'shadow-talk-500/30 relative z-10 block h-auto max-w-[1000px] rounded-xl shadow-[0_0_300px]    dark:bg-gray-900'
+            )}
+          >
+            <Image
+              className="rounded-xl "
+              alt="Event Image"
+              sizes="95vw, (min-width: 640px) 32rem, (min-width: 1024px) 45vw, (min-width: 1280px) 1000px"
+              src="/Talk.jpg"
+              width="1000"
+              height="500"
+            />
+          </div>
           <SectionContent>
             <p>
               <a>Le Starter dont je suis le héros</a> is the name of our Start
@@ -303,9 +312,6 @@ export default function Home() {
               cherry-picked the most effective strategies.
             </p>
             <div className="flex flex-row space-x-4 py-2">
-              <span className="inline-flex items-center rounded-md bg-yellow-50 px-2 py-1 text-xs font-medium text-yellow-800 ring-1 ring-inset ring-yellow-600/20">
-                StartUI Conference
-              </span>
               <span className="inline-flex items-center rounded-md bg-indigo-50 px-2 py-1 text-xs font-medium text-indigo-700 ring-1 ring-inset ring-indigo-700/10">
                 Technical Choices
               </span>
@@ -317,14 +323,21 @@ export default function Home() {
               </span>
             </div>
           </SectionContent>
-          <div className="flex space-x-4">
+          <div className="flex flex-col space-y-4  md:flex-row md:space-x-4 lg:flex-row lg:space-x-4 lg:space-y-0">
             <Link
-              href="/conferences"
-              className="inline-flex w-fit items-center gap-x-1.5 rounded-md bg-gradient-to-r from-purple-400 to-purple-500 px-2.5 py-1.5 font-medium text-black shadow-sm"
+              href="/conferences/Past"
+              className="inline-flex w-fit  items-center gap-x-1.5 rounded-md  bg-gradient-to-r from-purple-400 to-purple-500 px-2.5 py-1.5 font-medium text-black shadow-sm md:w-fit lg:w-fit"
             >
               <LuMic2 />
-              Previous Conferences
+              Past conferences
             </Link>
+            {/*    <Link
+              href="/conferences/Future"
+              className="inline-flex w-fit items-center gap-x-1.5 rounded-md bg-gradient-to-r from-purple-400 to-purple-500 px-2.5 py-1.5 font-medium text-black shadow-sm md:w-fit lg:w-fit"
+            >
+              <LuMic2 />
+              Coming conferences
+            </Link> */}
           </div>
         </Section>
         <Testimonials />
