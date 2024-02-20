@@ -22,6 +22,9 @@ module.exports = {
         figma: {
           500: '#10B981',
         },
+        talk: {
+          500: '#c084fc',
+        },
       },
     },
   },
@@ -47,9 +50,8 @@ module.exports = {
           background: 'linear-gradient(153deg, #6EE7B7 0%, #10B981 100%)',
         },
         '.gradient-youtube': {
-          background: 'linear-gradient(153deg, #c4302b  0%, #FF0000  100%)'
-        }
-        
+          background: 'linear-gradient(153deg, #c4302b  0%, #FF0000  100%)',
+        },
       });
     }),
   ],

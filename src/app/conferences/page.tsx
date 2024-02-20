@@ -6,9 +6,10 @@ import {
   SectionImage,
   SectionTitle,
 } from '@/components/Section';
-import { LuMapPin, LuYoutube } from 'react-icons/lu';
+import { LuArrowLeft, LuArrowRight, LuMapPin, LuYoutube } from 'react-icons/lu';
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
+import Link from 'next/link';
 const confList = [
   {
     city: 'Lyon, France',
@@ -118,78 +119,90 @@ const Coneferences = () => {
     <div className="flex flex-1 flex-col lg:flex-row">
       <FixedSidebar />
       <PageContainer>
-        {confList.map((conf) => (
-          <Section id="web" key={conf.date}>
-            <SectionTitle>
-              <a className="flex items-start gap-1 text-2xl">
-                {conf.description}
-                <span className="sr-only">le starter dont je suis le héro</span>
-              </a>
-            </SectionTitle>
-            <a
-              className={cn(
-                'relative z-10 block h-auto max-w-[1000px] rounded-xl shadow-[0_0_300px] shadow-web-500/30    dark:bg-gray-900'
-              )}
-            >
-              <Image
-                className="rounded-xl shadow-2xl shadow-black/50"
-                alt="Event Image"
-                sizes="95vw, (min-width: 640px) 32rem, (min-width: 1024px) 45vw, (min-width: 1280px) 1000px"
-                src={conf.image}
-                width="1000"
-                height="500"
-              />
-            </a>
-            <div className="prose-invert relative  prose-p:my-1">
-              {/*               <p>Organized By: {conf.organisedby}</p>
-               */}{' '}
-              {/*  <p>HostedBy : hosted by Le Wagon Belgium - Brussels</p> */}
-              <p>
-                <span>City :</span> {conf.city}
-              </p>
-              <p>Date : {conf.date} </p>
-              Presented by :
-              <div className=" mt-5 grid grid-cols-2 gap-8">
-                {conf.animatedby.map((person) => (
-                  <div
-                    className="flex w-full items-center space-x-5 "
-                    key={conf.date}
-                  >
-                    <a
-                      href={person.profile}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Image
-                        height={500}
-                        width={500}
-                        className="inline-block h-12 w-12 rounded-full"
-                        src={person.picture}
-                        alt=""
-                      />
-                    </a>
-                    <div className="items-center  leading-none">
-                      <p>{person.name}</p>
-                      <p className=" text-sm text-gray-500">{person.role}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-            {conf.video && (
-              <div className="mt-5 flex space-x-4">
-                <a
-                  target="_blank"
-                  href={conf.video}
-                  className="gradient-youtube inline-flex w-fit items-center gap-x-1.5 rounded-md px-2.5 py-1.5 font-medium text-white shadow-sm"
-                >
-                  <LuYoutube /> Replay
+        <div className="flex justify-between">
+          <Link
+            href="/"
+            className="inline-flex w-fit items-center gap-x-1.5 rounded-md bg-gray-200 px-2.5 py-1.5 font-medium text-black shadow-sm"
+          >
+            <LuArrowLeft className="-ml-0.5 h-5 w-5" aria-hidden="true" />
+            Go back
+          </Link>
+        </div>
+        <Section className="gap-24" id="conferences">
+          {confList.map((conf) => (
+            <Section id="web" key={conf.date}>
+              <SectionTitle>
+                <a className="flex items-start gap-1 text-2xl">
+                  {conf.description}
+                  <span className="sr-only">
+                    le starter dont je suis le héro
+                  </span>
                 </a>
+              </SectionTitle>
+              <a
+                className={cn(
+                  'relative z-10 block h-auto max-w-[1000px] rounded-xl shadow-[0_0_300px] shadow-web-500/30    dark:bg-gray-900'
+                )}
+              >
+                <Image
+                  className="rounded-xl shadow-2xl shadow-black/50"
+                  alt="Event Image"
+                  sizes="95vw, (min-width: 640px) 32rem, (min-width: 1024px) 45vw, (min-width: 1280px) 1000px"
+                  src={conf.image}
+                  width="1000"
+                  height="500"
+                />
+              </a>
+              <div className="prose-invert relative  prose-p:my-1">
+                {/*               <p>Organized By: {conf.organisedby}</p>
+                 */}{' '}
+                {/*  <p>HostedBy : hosted by Le Wagon Belgium - Brussels</p> */}
+                <p>
+                  <span>City :</span> {conf.city}
+                </p>
+                <p>Date : {conf.date} </p>
+                Presented by :
+                <div className=" mt-5 grid grid-cols-1 gap-8  lg:grid-cols-2">
+                  {conf.animatedby.map((person) => (
+                    <div
+                      className="flex w-full items-center space-x-5 "
+                      key={conf.date}
+                    >
+                      <a
+                        href={person.profile}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Image
+                          height={500}
+                          width={500}
+                          className="inline-block h-12 w-12 rounded-full"
+                          src={person.picture}
+                          alt=""
+                        />
+                      </a>
+                      <div className="items-center  leading-none">
+                        <p>{person.name}</p>
+                        <p className=" text-sm text-gray-500">{person.role}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
-            )}
-          </Section>
-        ))}
-        <section></section>
+              {conf.video && (
+                <div className="mt-5 flex space-x-4">
+                  <a
+                    target="_blank"
+                    href={conf.video}
+                    className="gradient-youtube inline-flex w-fit items-center gap-x-1.5 rounded-md px-2.5 py-1.5 font-medium text-white shadow-sm"
+                  >
+                    <LuYoutube /> Replay
+                  </a>
+                </div>
+              )}
+            </Section>
+          ))}
+        </Section>
       </PageContainer>
     </div>
   );
