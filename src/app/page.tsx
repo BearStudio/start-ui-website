@@ -290,7 +290,7 @@ export default function Home() {
             src="/Talk.jpg"
             alt="Start UI Web"
             href="http://web.start-ui.com/"
-            className="shadow-web-500/30 group-hover:shadow-web-500/40"
+            className="shadow-talk-500/30 group-hover:shadow-talk-500/40"
           />
           <SectionContent>
             <p>
@@ -302,11 +302,10 @@ export default function Home() {
               experimentation across different projects, where we&apos;ve
               cherry-picked the most effective strategies.
             </p>
-            <div className="flex flex-row space-x-4">
+            <div className="flex flex-row space-x-4 py-2">
               <span className="inline-flex items-center rounded-md bg-yellow-50 px-2 py-1 text-xs font-medium text-yellow-800 ring-1 ring-inset ring-yellow-600/20">
                 StartUI Conference
               </span>
-
               <span className="inline-flex items-center rounded-md bg-indigo-50 px-2 py-1 text-xs font-medium text-indigo-700 ring-1 ring-inset ring-indigo-700/10">
                 Technical Choices
               </span>
@@ -314,14 +313,14 @@ export default function Home() {
                 Tech Talks
               </span>
               <span className="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
-                Web Applications
+                Web Application
               </span>
             </div>
           </SectionContent>
           <div className="flex space-x-4">
             <Link
               href="/conferences"
-              className="gradient-web inline-flex w-fit items-center gap-x-1.5 rounded-md px-2.5 py-1.5 font-medium text-black shadow-sm"
+              className="inline-flex w-fit items-center gap-x-1.5 rounded-md bg-gradient-to-r from-purple-400 to-purple-500 px-2.5 py-1.5 font-medium text-black shadow-sm"
             >
               <LuMic2 />
               Previous Conferences
