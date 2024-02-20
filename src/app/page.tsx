@@ -311,7 +311,44 @@ export default function Home() {
               experimentation across different projects, where we&apos;ve
               cherry-picked the most effective strategies.
             </p>
-            <div className="flex flex-row space-x-4 py-2">
+            <p>
+              Follow us on social media to stay updated about our upcoming
+              meetups: <br />
+              <a
+                href="https://twitter.com/_BearStudio"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Twitter
+              </a>
+              ,{' '}
+              <a
+                href="https://www.linkedin.com/company/bearstudio/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Linkedin
+              </a>
+              ,{' '}
+              <a
+                href="https://www.instagram.com/_bearstudio/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Instagram
+              </a>
+              ,{' '}
+              <a
+                href="https://www.facebook.com/allyouneedisbear"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Facebook
+              </a>{' '}
+              .
+            </p>
+
+            {/*  <div className="flex flex-row space-x-4 py-2">
               <span className="inline-flex items-center rounded-md bg-indigo-50 px-2 py-1 text-xs font-medium text-indigo-700 ring-1 ring-inset ring-indigo-700/10">
                 Technical Choices
               </span>
@@ -321,7 +358,7 @@ export default function Home() {
               <span className="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
                 Web Application
               </span>
-            </div>
+            </div> */}
           </SectionContent>
           <div className="flex flex-col space-y-4  md:flex-row md:space-x-4 lg:flex-row lg:space-x-4 lg:space-y-0">
             <Link
@@ -331,14 +368,13 @@ export default function Home() {
               <LuMic2 />
               Past conferences
             </Link>
-            {/*    <Link
-              href="/conferences/Future"
-              className="inline-flex w-fit items-center gap-x-1.5 rounded-md bg-gradient-to-r from-purple-400 to-purple-500 px-2.5 py-1.5 font-medium text-black shadow-sm md:w-fit lg:w-fit"
-            >
-              <LuMic2 />
-              Coming conferences
-            </Link> */}
           </div>
+          {/*  <p>
+            Excited to hear us talk about StartUI? Follow us on our social media
+            channels to stay updated and join our upcoming meetup dedicated to
+            discussing StartUI! Don&apos;t miss out on this opportunity to learn
+            more and engage with our community.
+          </p> */}
         </Section>
         <Testimonials />
       </PageContainer>
