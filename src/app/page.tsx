@@ -285,11 +285,11 @@ export default function Home() {
         </Section>
         <Section id="Talk">
           <SectionTitle>
-            <p className="text-xl">Our Talk</p>
+            <p className="text-3xl font-medium">Our talk </p>
           </SectionTitle>
           <div
             className={cn(
-              'shadow-talk-500/30 relative z-10 block h-auto max-w-[1000px] rounded-xl shadow-[0_0_300px]    dark:bg-gray-900'
+              'relative z-10 block h-auto max-w-[1000px] rounded-xl shadow-[0_0_300px] shadow-talk-500/30 group-hover:shadow-talk-500/40   dark:bg-gray-900'
             )}
           >
             <Image
@@ -303,13 +303,15 @@ export default function Home() {
           </div>
           <SectionContent>
             <p>
-              <a>Le Starter dont je suis le héros</a> is the name of our Start
-              UI conference, where we discuss the ins and outs of Start UI. We
-              share our technical choices and the best practices we&apos;ve
-              implemented in our web application starter, 🚀 Start UI, which has
-              accumulated over 1300 stars. Our journey is the result of years of
-              experimentation across different projects, where we&apos;ve
-              cherry-picked the most effective strategies.
+              <span className="font-bold underline underline-offset-2">
+                Choose your own adventure
+              </span>{' '}
+              is the name of our Start UI presentation, where we discuss the ins
+              and outs of Start UI. We share our technical choices and the best
+              practices we&apos;ve implemented in our web application starter,
+              🚀 Start UI, which has accumulated over 1300 stars. Our journey is
+              the result of years of experimentation across different projects,
+              where we&apos;ve cherry-picked the most effective strategies.
             </p>
             <p>
               Follow us on social media to stay updated about our upcoming
@@ -347,18 +349,6 @@ export default function Home() {
               </a>{' '}
               .
             </p>
-
-            {/*  <div className="flex flex-row space-x-4 py-2">
-              <span className="inline-flex items-center rounded-md bg-indigo-50 px-2 py-1 text-xs font-medium text-indigo-700 ring-1 ring-inset ring-indigo-700/10">
-                Technical Choices
-              </span>
-              <span className="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10">
-                Tech Talks
-              </span>
-              <span className="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
-                Web Application
-              </span>
-            </div> */}
           </SectionContent>
           <div className="flex flex-col space-y-4  md:flex-row md:space-x-4 lg:flex-row lg:space-x-4 lg:space-y-0">
             <Link
@@ -369,12 +359,6 @@ export default function Home() {
               Past conferences
             </Link>
           </div>
-          {/*  <p>
-            Excited to hear us talk about StartUI? Follow us on our social media
-            channels to stay updated and join our upcoming meetup dedicated to
-            discussing StartUI! Don&apos;t miss out on this opportunity to learn
-            more and engage with our community.
-          </p> */}
         </Section>
         <Testimonials />
       </PageContainer>
