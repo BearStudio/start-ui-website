@@ -25,7 +25,9 @@ const confList = [
     ],
     image: '/Lyon.jpg',
     date: 'October 11, 2023',
+    dateFormatISO: '2024-10-11',
     video: 'https://www.youtube.com/watch?v=kJAH7dtytxM',
+    location: 'Indy 94 Rue Robert ',
   },
   {
     city: 'Brussels, Belgium 🇧🇪',
@@ -46,6 +48,8 @@ const confList = [
     ],
     image: '/Bruxelles.jpg',
     date: 'September 6, 2023',
+    dateFormatISO: '2023-09-06',
+    location: ' BeCentral - Cantersteen 10-12, 1000',
   },
   {
     city: 'Bordeaux, France 🇫🇷',
@@ -66,6 +70,8 @@ const confList = [
     ],
     image: '/Bordeaux.jpeg',
     date: 'July 11, 2023',
+    dateFormatISO: '2023-07-11',
+    location: '13 Rue des Cordeliers ',
   },
   {
     city: 'Nantes, France 🇫🇷',
@@ -86,6 +92,8 @@ const confList = [
     ],
     image: '/Nantes.jpg',
     date: 'Mars 16, 2023',
+    dateFormatISO: '2023-03-16',
+    location: 'Zenika',
   },
   {
     city: 'Rouen, France 🇫🇷',
@@ -107,6 +115,8 @@ const confList = [
     image: '/rouen.jpg',
     video: 'https://www.youtube.com/watch?v=5yk34hF40Ok',
     date: 'November 17, 2022',
+    dateFormatISO: '2022-11-17',
+    location: 'Kindarena',
   },
 ];
 const PastConeferences = () => {
@@ -119,50 +129,51 @@ const PastConeferences = () => {
           className="inline-flex w-fit items-center gap-x-1.5 rounded-md bg-gray-200 px-2.5 py-1.5 font-medium text-black shadow-sm "
         >
           <LuArrowLeft className="-ml-0.5 h-5 w-5" aria-hidden="true" />
-          Go back
+          Back
         </Link>
 
         <Section className="gap-24" id="conferences">
           {confList.map((conf) => (
-            <Section id="web" key={conf.date}>
+            <Section key={conf.date}>
               <SectionTitle>
-                <a className="flex items-start gap-1 text-xl">
+                <p className="flex items-start gap-1 text-xl">
                   {conf.description}
-                  <span className="sr-only">
-                    le starter dont je suis le héro
-                  </span>
-                </a>
+                  <span className="sr-only">Choose your own adventure</span>
+                </p>
               </SectionTitle>
               <div
                 className={cn(
-                  'relative z-10 block h-auto max-w-[1000px] rounded-xl shadow-[0_0_300px] shadow-web-500/30    dark:bg-gray-900'
+                  'relative z-10 block h-auto max-w-[1000px] rounded-xl shadow-[0_0_100px] shadow-talk-500/30   dark:bg-gray-900'
                 )}
               >
                 <Image
-                  className="rounded-xl shadow-2xl shadow-black/50"
-                  alt="Event Image"
+                  className="rounded-xl"
+                  alt={conf.description}
                   sizes="95vw, (min-width: 640px) 32rem, (min-width: 1024px) 45vw, (min-width: 1280px) 1000px"
                   src={conf.image}
                   width="1000"
                   height="500"
+                  loading="eager"
                 />
               </div>
               <div className="prose-invert relative  prose-p:my-1">
                 <p>
-                  <span>City :</span> {conf.city}
+                  Date: <time dateTime={conf.dateFormatISO}>{conf.date} </time>{' '}
                 </p>
-                <p>Date : {conf.date} </p>
-                Presented by :
+                <p className="text-white">City: {conf.city}</p>
+                <p>Location details: {conf.location}</p>
+                Speakers :
                 <div className=" mt-5 grid grid-cols-1 gap-8  lg:grid-cols-2">
                   {conf.animatedby.map((person) => (
                     <div
                       className="flex w-full items-center space-x-5 "
-                      key={conf.date}
+                      key={person.name}
                     >
                       <a
                         href={person.profile}
                         target="_blank"
                         rel="noopener noreferrer"
+                        aria-label={person.name}
                       >
                         <Image
                           height={500}
@@ -174,7 +185,7 @@ const PastConeferences = () => {
                       </a>
                       <div className="items-center  leading-none">
                         <p>{person.name}</p>
-                        <p className=" text-sm text-gray-500">{person.role}</p>
+                        <p className=" text-sm text-gray-400">{person.role}</p>
                       </div>
                     </div>
                   ))}
