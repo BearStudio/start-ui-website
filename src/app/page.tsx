@@ -496,7 +496,7 @@ const Testimonials = () => {
                   width={200}
                   height={200}
                   src="https://avatars.githubusercontent.com/u/11244750?v=4"
-                  alt=""
+                  alt="William Elong Avatar"
                 />
               </a>
               <div className="flex flex-col space-y-1">
@@ -567,7 +567,7 @@ const Testimonials = () => {
                   width={200}
                   height={200}
                   src="https://avatars.githubusercontent.com/u/7940852?s=64&v=4"
-                  alt=""
+                  alt="Cédric Dué Image"
                 />
               </a>
               <div className="flex flex-col space-y-1">
