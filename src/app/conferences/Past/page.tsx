@@ -75,7 +75,7 @@ const confList = [
     date: 'July 11, 2023',
     dateFormatISO: '2023-07-11',
     location: '13 Rue des Cordeliers ',
-    images: ['Bordeaux1.jpeg'],
+    images: ['Bordeaux1.jpg'],
   },
   {
     city: 'Nantes, France 🇫🇷',
@@ -130,14 +130,15 @@ const PastConeferences = () => {
     <div className="flex flex-1 flex-col lg:flex-row">
       <FixedSidebar />
       <PageContainer>
-        <Link
-          href="/"
-          className="inline-flex w-fit items-center gap-x-1.5 rounded-md bg-gray-200 px-2.5 py-1.5 font-medium text-black shadow-sm "
-        >
-          <LuArrowLeft className="-ml-0.5 h-5 w-5" aria-hidden="true" />
-          Back
-        </Link>
-
+        <div className="-mb-10">
+          <Link
+            href="/"
+            className="inline-flex w-fit items-center gap-x-1.5 rounded-md bg-gray-200 px-2.5 py-1.5 font-medium text-black shadow-sm  "
+          >
+            <LuArrowLeft className="-ml-0.5 h-5 w-5" aria-hidden="true" />
+            Back
+          </Link>
+        </div>
         <Section className="gap-24" id="conferences">
           {confList.map((conf) => (
             <Section key={conf.date}>
@@ -152,15 +153,6 @@ const PastConeferences = () => {
                   'relative z-10 block h-auto max-w-[1000px] rounded-xl shadow-[0_0_100px] shadow-talk-500/30   dark:bg-gray-900'
                 )}
               >
-                {/*  <Image
-                  className="rounded-xl"
-                  alt={conf.description}
-                  sizes="95vw, (min-width: 640px) 32rem, (min-width: 1024px) 45vw, (min-width: 1280px) 1000px"
-                  src={conf.image}
-                  width="1000"
-                  height="500"
-                  loading="eager"
-                /> */}
                 <Caroussel images={conf.images} folder={conf.folder} />
               </div>
               <div className="prose-invert relative  prose-p:my-1">
