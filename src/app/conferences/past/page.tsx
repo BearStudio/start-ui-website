@@ -1,14 +1,20 @@
 import React from 'react';
 import { FixedSidebar, PageContainer } from '../../page';
 import { Section, SectionTitle } from '@/components/Section';
-import { LuArrowLeft, LuYoutube } from 'react-icons/lu';
+import {
+  LuArrowLeft,
+  LuCalendarDays,
+  LuMapPin,
+  LuYoutube,
+} from 'react-icons/lu';
+
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
 import Caroussel from '@/components/Caroussel';
 const confList = [
   {
-    city: 'Lyon, France 🇫🇷',
+    city: 'Indy, Lyon, France 🇫🇷',
     description: 'Meetup LyonJS',
     animatedby: [
       {
@@ -32,7 +38,7 @@ const confList = [
     images: ['Lyon1.jpg', 'Lyon2.jpg', 'Lyon3.jpg'],
   },
   {
-    city: 'Brussels, Belgium 🇧🇪',
+    city: 'BeCentral, Brussels, Belgium 🇧🇪',
     description: 'Meetup BeJs ',
     animatedby: [
       {
@@ -78,7 +84,7 @@ const confList = [
     images: ['Bordeaux1.jpg'],
   },
   {
-    city: 'Nantes, France 🇫🇷',
+    city: 'Zenika, Nantes, France 🇫🇷',
     description: 'Meetup NantesJs',
     animatedby: [
       {
@@ -101,7 +107,7 @@ const confList = [
     images: ['Nantes1.jpg', 'Nantes2.jpg'],
   },
   {
-    city: 'Rouen, France 🇫🇷',
+    city: 'Kindarena,Rouen, France 🇫🇷',
     description: ' Meetup Codeurs en Seine',
     animatedby: [
       {
@@ -139,7 +145,9 @@ const PastConeferences = () => {
             Back
           </Link>
         </div>
+
         <Section className="gap-24" id="conferences">
+          <h2 className=" -mb-16  text-3xl">Choose your own adventure</h2>
           {confList.map((conf) => (
             <Section key={conf.date}>
               <SectionTitle>
@@ -155,13 +163,15 @@ const PastConeferences = () => {
               >
                 <Caroussel images={conf.images} folder={conf.folder} />
               </div>
-              <div className="prose-invert relative  prose-p:my-1">
-                <p>
-                  Date: <time dateTime={conf.dateFormatISO}>{conf.date} </time>{' '}
+              <div className="prose-invert relative  prose-p:my-3">
+                <p className="flex items-center gap-4   font-thin">
+                  <LuCalendarDays size={25} />
+                  <time dateTime={conf.dateFormatISO}>{conf.date} </time>{' '}
                 </p>
-                <p className="text-white">City: {conf.city}</p>
-                <p>Location details: {conf.location}</p>
-                Speakers :
+                <p className="flex items-center gap-4 font-thin text-white ">
+                  <LuMapPin size={25} />
+                  {conf.city}
+                </p>
                 <div className=" mt-5 grid grid-cols-1 gap-8  lg:grid-cols-2">
                   {conf.animatedby.map((person) => (
                     <div
