@@ -53,13 +53,14 @@ const Caroussel = (props: CarousselProps) => {
         {props.images.map((image, index) => (
           <Image
             key={index}
-            className={cn('embla__slide rounded-xl')}
+            className={cn('embla__slide rounded-xl object-cover')}
             sizes="95vw, (min-width: 640px) 32rem, (min-width: 1024px) 45vw, (min-width: 1280px) 1000px"
             src={`/${props.folder}/${image}`}
             // src="/CoudeurEnSeine/Coudeur3.jpg"
             width="1000"
             height="500"
             alt={image}
+            priority={index == 0 ? true : false}
           />
         ))}
       </div>

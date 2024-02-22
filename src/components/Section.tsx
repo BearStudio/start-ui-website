@@ -48,6 +48,7 @@ export const SectionImage = (props: SectionImageProps) => {
         src={props.src}
         width="1000"
         height="500"
+        priority={true}
       />
     </a>
   );
