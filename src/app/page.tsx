@@ -285,7 +285,9 @@ export default function Home() {
         </Section>
         <Section id="Talk">
           <SectionTitle>
-            <p className="text-3xl font-medium">Our talk </p>
+            <a className="text-3xl font-medium" href="/conferences/past">
+              Our talk{' '}
+            </a>
           </SectionTitle>
           <div
             className={cn(
@@ -303,10 +305,8 @@ export default function Home() {
           </div>
           <SectionContent>
             <p>
-              <span className="font-bold underline underline-offset-2">
-                Choose your own adventure
-              </span>{' '}
-              is the name of our Start UI presentation, where we discuss the ins
+              <span className="font-bold">Choose your own adventure</span> is
+              the name of our Start UI presentation, where we discuss the ins
               and outs of Start UI. We share our technical choices and the best
               practices we&apos;ve implemented in our web application starter,
               🚀 Start UI, which has accumulated over 1300 stars. Our journey is
@@ -352,7 +352,7 @@ export default function Home() {
           </SectionContent>
           <div className="flex flex-col space-y-4  md:flex-row md:space-x-4 lg:flex-row lg:space-x-4 lg:space-y-0">
             <Link
-              href="/conferences/Past"
+              href="/conferences/past"
               className="inline-flex w-fit  items-center gap-x-1.5 rounded-md  bg-gradient-to-r from-purple-400 to-purple-500 px-2.5 py-1.5 font-medium text-black shadow-sm md:w-fit lg:w-fit"
             >
               <LuMic2 />
