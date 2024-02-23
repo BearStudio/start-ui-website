@@ -34,7 +34,6 @@ const confList = [
     date: 'October 11, 2023',
     dateFormatISO: '2024-10-11',
     video: 'https://www.youtube.com/watch?v=kJAH7dtytxM',
-    location: 'Indy 94 Rue Robert ',
     images: ['Lyon1.jpg', 'Lyon2.jpg', 'Lyon3.jpg'],
   },
   {
@@ -57,7 +56,6 @@ const confList = [
     folder: 'BeJS',
     date: 'September 6, 2023',
     dateFormatISO: '2023-09-06',
-    location: ' BeCentral - Cantersteen 10-12, 1000',
     images: ['Brussels1.jpg', 'Brussels2.jpg', 'Brussels3.jpg'],
   },
   {
@@ -80,7 +78,6 @@ const confList = [
     folder: 'BordeauxJS',
     date: 'July 11, 2023',
     dateFormatISO: '2023-07-11',
-    location: '13 Rue des Cordeliers ',
     images: ['Bordeaux1.jpg'],
   },
   {
@@ -103,11 +100,10 @@ const confList = [
     folder: 'NantesJS',
     date: 'Mars 16, 2023',
     dateFormatISO: '2023-03-16',
-    location: 'Zenika',
     images: ['Nantes1.jpg', 'Nantes2.jpg'],
   },
   {
-    city: 'Kindarena,Rouen, France 🇫🇷',
+    city: 'Kindarena, Rouen, France 🇫🇷',
     description: ' Meetup Codeurs en Seine',
     animatedby: [
       {
@@ -127,7 +123,6 @@ const confList = [
     video: 'https://www.youtube.com/watch?v=5yk34hF40Ok',
     date: 'November 17, 2022',
     dateFormatISO: '2022-11-17',
-    location: 'Kindarena',
     images: ['Coudeur1.jpg', 'Coudeur2.jpg', 'Coudeur3.jpg'],
   },
 ];
