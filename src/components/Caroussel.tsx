@@ -48,24 +48,26 @@ const Caroussel = (props: CarousselProps) => {
 
   return (
     <div className="embla" ref={emblaRef}>
-      <div className="embla__container">
+      <div className={cn('embla__container h-auto')}>
         {props.images.map((image, index) => (
           <Image
-            key={index}
-            className={cn('embla__slide rounded-xl object-cover')}
+            key={image}
+            className={cn('embla__slide     rounded-xl object-cover')}
             sizes="95vw, (min-width: 640px) 32rem , (min-width: 1024px) 45vw, (min-width: 1280px) 1000px"
             src={`/${props.folder}/${image}`}
             width="1000"
             height="500"
             alt={image}
-            priority={index == 0 ? true : false}
+            priority={index === 0 ? true : false}
           />
         ))}
       </div>
-      <div className="embla__buttons">
-        <PrevButton onClick={scrollPrev} disabled={prevBtnDisabled} />
-        <NextButton onClick={scrollNext} disabled={nextBtnDisabled} />
-      </div>
+      {props.images.length !== 1 && (
+        <div className="embla__buttons">
+          <PrevButton onClick={scrollPrev} disabled={prevBtnDisabled} />
+          <NextButton onClick={scrollNext} disabled={nextBtnDisabled} />
+        </div>
+      )}
     </div>
   );
 };
