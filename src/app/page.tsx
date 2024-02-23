@@ -295,7 +295,7 @@ export default function Home() {
             )}
           >
             <Image
-              className="rounded-xl "
+              className="rounded-xl"
               alt="Event Image"
               sizes="95vw, (min-width: 640px) 32rem, (min-width: 1024px) 45vw, (min-width: 1280px) 1000px"
               src="/Talk.jpg"

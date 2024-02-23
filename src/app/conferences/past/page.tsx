@@ -147,28 +147,29 @@ const PastConeferences = () => {
         </div>
 
         <Section className="gap-24" id="conferences">
-          <h2 className=" -mb-16  text-3xl">Choose your own adventure</h2>
+          <h2 className=" -mb-16  text-3xl font-semibold">
+            Choose your own adventure
+          </h2>
           {confList.map((conf) => (
             <Section key={conf.date}>
               <SectionTitle>
                 <p className="flex items-start gap-1 text-xl">
                   {conf.description}
-                  <span className="sr-only">Choose your own adventure</span>
                 </p>
               </SectionTitle>
               <div
                 className={cn(
-                  'relative z-10 block h-auto max-w-[1000px] rounded-xl shadow-[0_0_100px] shadow-talk-500/30   dark:bg-gray-900'
+                  'relative z-10 max-w-[1000px] rounded-xl shadow-[0_0_100px] shadow-talk-500/30 dark:bg-gray-900'
                 )}
               >
                 <Caroussel images={conf.images} folder={conf.folder} />
               </div>
-              <div className="prose-invert relative  prose-p:my-3">
-                <p className="flex items-center gap-4   font-thin">
+              <div className="prose-invert relative prose-p:my-3">
+                <p className="flex items-center gap-4 pl-2 font-thin">
                   <LuCalendarDays size={25} />
                   <time dateTime={conf.dateFormatISO}>{conf.date} </time>{' '}
                 </p>
-                <p className="flex items-center gap-4 font-thin text-white ">
+                <p className="flex items-center gap-4 pl-2 font-thin text-white">
                   <LuMapPin size={25} />
                   {conf.city}
                 </p>
