@@ -64,8 +64,16 @@ const Caroussel = (props: CarousselProps) => {
       </div>
       {props.images.length !== 1 && (
         <div className="embla__buttons">
-          <PrevButton onClick={scrollPrev} disabled={prevBtnDisabled} />
-          <NextButton onClick={scrollNext} disabled={nextBtnDisabled} />
+          <PrevButton
+            onClick={scrollPrev}
+            disabled={prevBtnDisabled}
+            aria-label="Previous Image"
+          />
+          <NextButton
+            onClick={scrollNext}
+            disabled={nextBtnDisabled}
+            aria-label="Next Image"
+          />
         </div>
       )}
     </div>
