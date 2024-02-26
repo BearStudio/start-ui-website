@@ -27,10 +27,10 @@ export default function Home() {
       <PageContainer>
         <Section id="web">
           <SectionTitle>
-            <a href="http://web.start-ui.com/">
+            <Link href="http://web.start-ui.com/" target="_blank">
               <LogoWeb className="h-8" />
               <span className="sr-only">Start UI Web</span>
-            </a>
+            </Link>
           </SectionTitle>
           <SectionImage
             src="/web.jpg"
@@ -50,88 +50,88 @@ export default function Home() {
               Layout, 🧑‍💻 User Management, 🇫🇷 Internationalization &
               Right-to-Left support, 🌚 Dark Mode, 🎛 Advanced components for
               easy development. You can try out the{' '}
-              <a
+              <Link
                 href="https://demo.start-ui.com"
                 target="_blank"
                 rel="noreferrer noopener"
               >
                 demo app
-              </a>
+              </Link>
               .
             </p>
             <p>
               Ready to use with{' '}
-              <a
+              <Link
                 href="https://www.typescriptlang.org/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 TypeScript
-              </a>
+              </Link>
               ,{' '}
-              <a
+              <Link
                 href="https://react.dev/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 React
-              </a>
+              </Link>
               ,{' '}
-              <a
+              <Link
                 href="https://nextjs.org/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 NextJS
-              </a>
+              </Link>
               ,{' '}
-              <a
+              <Link
                 href="https://chakra-ui.com/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Chakra UI
-              </a>
+              </Link>
               ,{' '}
-              <a
+              <Link
                 href="https://trpc.io/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 tRPC
-              </a>
+              </Link>
               ,{' '}
-              <a
+              <Link
                 href="https://www.prisma.io/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Prisma
-              </a>
+              </Link>
               ,{' '}
-              <a
+              <Link
                 href="https://tanstack.com/query/latest"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 TanStack Query
-              </a>
+              </Link>
               ,{' '}
-              <a
+              <Link
                 href="https://storybook.js.org/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Storybook
-              </a>
+              </Link>
               ,{' '}
-              <a
+              <Link
                 href="https://playwright.dev/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Playwright
-              </a>
+              </Link>
               ,{' '}
               <a
                 href="https://react-hook-form.com/"
@@ -141,47 +141,47 @@ export default function Home() {
                 React Hook Form
               </a>
               ,{' '}
-              <a
+              <Link
                 href="https://react.i18next.com/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 React i18next
-              </a>
+              </Link>
               ,{' '}
-              <a
+              <Link
                 href="https://react.email/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 React Email
-              </a>
+              </Link>
               , and more.
             </p>
           </SectionContent>
           <div className="flex space-x-4">
-            <a
+            <Link
               target="_blank"
               href="http://web.start-ui.com/"
               className="gradient-web inline-flex w-fit items-center gap-x-1.5 rounded-md px-2.5 py-1.5 font-medium text-black shadow-sm"
             >
               <LuGithub /> Get on GitHub
-            </a>
-            <a
+            </Link>
+            <Link
               target="_blank"
               href="http://demo.start-ui.com/"
               className="inline-flex w-fit items-center gap-x-1.5 rounded-md bg-black px-2.5 py-1.5 font-medium text-white shadow-[0_0_60px] shadow-web-500/40 transition hover:shadow-web-500/60"
             >
               <LuPlayCircle /> Demo
-            </a>
+            </Link>
           </div>
         </Section>
         <Section id="native">
           <SectionTitle>
-            <a target="_blank" href="http://native.start-ui.com/">
+            <Link target="_blank" href="http://native.start-ui.com/">
               <LogoNative className="h-8" />
               <span className="sr-only">Start UI Native</span>
-            </a>
+            </Link>
           </SectionTitle>
           <SectionImage
             src="/native.jpg"
@@ -202,62 +202,62 @@ export default function Home() {
             </p>
             <p>
               Ready to use with{' '}
-              <a
+              <Link
                 href="https://www.typescriptlang.org/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 TypeScript
-              </a>
+              </Link>
               ,{' '}
-              <a
+              <Link
                 href="https://expo.dev/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Expo
-              </a>
+              </Link>
               ,{' '}
-              <a
+              <Link
                 href="https://ficus-ui.com/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Ficus UI
-              </a>
+              </Link>
               ,{' '}
-              <a
+              <Link
                 target="_blank"
                 href="https://www.zodios.org/"
                 rel="noopener noreferrer"
               >
                 Zodios
-              </a>
+              </Link>
               ,{' '}
-              <a
+              <Link
                 target="_blank"
                 href="https://formiz-react.com/"
                 rel="noopener noreferrer"
               >
                 Formiz
-              </a>{' '}
+              </Link>{' '}
               and more.
             </p>
           </SectionContent>
-          <a
+          <Link
             target="_blank"
             href="http://native.start-ui.com/"
             className="gradient-native inline-flex w-fit items-center gap-x-1.5 rounded-md px-2.5 py-1.5 font-medium text-black shadow-sm"
           >
             <LuGithub /> Get on GitHub
-          </a>
+          </Link>
         </Section>
         <Section id="figma">
           <SectionTitle>
-            <a target="_blank" href="http://figma.start-ui.com/">
+            <Link target="_blank" href="http://figma.start-ui.com/">
               <LogoFigma className="h-8" />
               <span className="sr-only">Start UI Web</span>
-            </a>
+            </Link>
           </SectionTitle>
           <SectionImage
             src="/figma.jpg"
@@ -275,19 +275,19 @@ export default function Home() {
               Prototypes and more.
             </p>
           </SectionContent>
-          <a
+          <Link
             target="_blank"
             href="http://figma.start-ui.com/"
             className="gradient-figma inline-flex w-fit items-center gap-x-1.5 rounded-md px-2.5 py-1.5 font-medium text-black shadow-sm"
           >
             <LuFigma /> Get on Figma
-          </a>
+          </Link>
         </Section>
-        <Section id="Talk">
+        <Section>
           <SectionTitle>
-            <a className="text-3xl font-medium" href="/conferences/past">
-              Our talk{' '}
-            </a>
+            <Link className="text-3xl font-medium" href="/conferences/past">
+              Our talk
+            </Link>
           </SectionTitle>
           <div
             className={cn(
@@ -309,44 +309,44 @@ export default function Home() {
               the name of our Start UI presentation, where we discuss the ins
               and outs of Start UI. We share our technical choices and the best
               practices we&apos;ve implemented in our web application starter,
-              🚀 Start UI, which has accumulated over 1300 stars. Our journey is
+              🚀 Start UI, which has accumulated over 1260 stars. Our journey is
               the result of years of experimentation across different projects,
               where we&apos;ve cherry-picked the most effective strategies.
             </p>
             <p>
               Follow us on social media to stay updated about our upcoming
               meetups: <br />
-              <a
+              <Link
                 href="https://twitter.com/_BearStudio"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Twitter
-              </a>
+              </Link>
               ,{' '}
-              <a
+              <Link
                 href="https://www.linkedin.com/company/bearstudio/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Linkedin
-              </a>
+              </Link>
               ,{' '}
-              <a
+              <Link
                 href="https://www.instagram.com/_bearstudio/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Instagram
-              </a>
+              </Link>
               ,{' '}
-              <a
+              <Link
                 href="https://www.facebook.com/allyouneedisbear"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Facebook
-              </a>{' '}
+              </Link>{' '}
               .
             </p>
           </SectionContent>
@@ -389,27 +389,30 @@ export function FixedSidebar() {
               </p>
             </div>
             <div className="flex items-center justify-center gap-4">
-              <a href="#web" aria-label="Go to the Start UI [web] section">
+              <Link href="#web" aria-label="Go to the Start UI [web] section">
                 <LogoWeb className="w-52" />
-              </a>
-              <a
+              </Link>
+              <Link
                 href="#native"
                 aria-label="Go to the Start UI [native] section"
               >
                 <LogoNative className="w-52" />
-              </a>
-              <a href="#figma" aria-label="Go to the Start UI [figma] section">
+              </Link>
+              <Link
+                href="#figma"
+                aria-label="Go to the Start UI [figma] section"
+              >
                 <LogoFigma className="w-52" />
-              </a>
+              </Link>
             </div>
           </div>
 
           <div className="flex items-center justify-center pb-4 lg:pb-6">
             <p className="flex items-baseline gap-x-1 text-white/50">
               From the{' '}
-              <a href="https://bearstudio.fr" className="text-white/80">
+              <Link href="https://bearstudio.fr" className="text-white/80">
                 BearStudio Team
-              </a>
+              </Link>
             </p>
           </div>
         </div>
@@ -468,14 +471,14 @@ const Testimonials = () => {
             <blockquote className="text-base italic text-white">
               <p>
                 When we started{' '}
-                <a
+                <Link
                   href="https://openares.net/"
                   target="_blank"
                   rel="noreferrer noopener"
                   className="font-bold hover:underline"
                 >
                   Ares project
-                </a>{' '}
+                </Link>{' '}
                 one of our main issue was to build appealing UI for our end
                 users on web and Android Platforms. With Start UI figma file we
                 have been able to quickly prototype our Idea, get beta testers
@@ -486,7 +489,7 @@ const Testimonials = () => {
               </p>
             </blockquote>
             <figcaption className="flex items-center space-x-3 text-white">
-              <a
+              <Link
                 href="https://github.com/Billyroot"
                 target="_blank"
                 rel="noreferrer noopener"
@@ -498,24 +501,24 @@ const Testimonials = () => {
                   src="https://avatars.githubusercontent.com/u/11244750?v=4"
                   alt="William Elong Avatar"
                 />
-              </a>
+              </Link>
               <div className="flex flex-col space-y-1">
-                <a
+                <Link
                   href="https://github.com/Billyroot"
                   target="_blank"
                   rel="noreferrer noopener"
                   className="text-base font-semibold"
                 >
                   William Elong
-                </a>
-                <a
+                </Link>
+                <Link
                   href="https://faradaylab.fr/"
                   target="_blank"
                   rel="noreferrer noopener"
                   className="text-xs"
                 >
                   Faraday
-                </a>
+                </Link>
               </div>
             </figcaption>
           </figure>
@@ -557,7 +560,7 @@ const Testimonials = () => {
               </p>
             </blockquote>
             <figcaption className="flex items-center space-x-3 text-white">
-              <a
+              <Link
                 href="https://github.com/cdue"
                 target="_blank"
                 rel="noreferrer noopener"
@@ -569,31 +572,31 @@ const Testimonials = () => {
                   src="https://avatars.githubusercontent.com/u/7940852?s=64&v=4"
                   alt="Cédric Dué Image"
                 />
-              </a>
+              </Link>
               <div className="flex flex-col space-y-1">
-                <a
+                <Link
                   href="https://github.com/cdue"
                   target="_blank"
                   rel="noreferrer noopener"
                   className="text-base font-semibold"
                 >
                   Cédric Dué
-                </a>
-                <a
+                </Link>
+                <Link
                   className="text-xs"
                   href="https://www.ysely.io/"
                   target="_blank"
                   rel="noreferrer noopener"
                 >
                   Ysely
-                </a>
+                </Link>
               </div>
             </figcaption>
           </figure>
         </div>
       </div>
       <div className="flex justify-center p-2">
-        <a
+        <Link
           href="https://github.com/BearStudio/start-ui-web/discussions/399"
           target="_blank"
           rel="noreferrer noopener"
@@ -601,7 +604,7 @@ const Testimonials = () => {
         >
           <span>Share your testimonial on GitHub</span>
           <LuExternalLink className="ml-1" />
-        </a>
+        </Link>
       </div>
       <div className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rotate-45 scale-50">
         <div

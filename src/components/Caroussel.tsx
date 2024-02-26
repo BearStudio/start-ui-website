@@ -23,7 +23,6 @@ const Caroussel = (props: CarousselProps) => {
   const [emblaRef, emblaApi] = useEmblaCarousel();
   const [prevBtnDisabled, setPrevBtnDisabled] = useState(true);
   const [nextBtnDisabled, setNextBtnDisabled] = useState(true);
-  /*  useEmblaCarousel.globalOptions = { loop: true }; */
   const scrollPrev = useCallback(
     () => emblaApi && emblaApi.scrollPrev(),
     [emblaApi]

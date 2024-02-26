@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { FixedSidebar, PageContainer } from '../../page';
-import { Section, SectionTitle } from '@/components/Section';
+import { Section, SectionContent, SectionTitle } from '@/components/Section';
 import {
   LuArrowLeft,
   LuCalendarDays,
@@ -15,7 +15,7 @@ import Caroussel from '@/components/Caroussel';
 const confList = [
   {
     city: 'Indy, Lyon, France 🇫🇷',
-    description: 'Meetup LyonJS',
+    title: 'Meetup LyonJS',
     animatedby: [
       {
         name: 'Ivan Dalmet',
@@ -38,7 +38,7 @@ const confList = [
   },
   {
     city: 'BeCentral, Brussels, Belgium 🇧🇪',
-    description: 'Meetup BeJs ',
+    title: 'Meetup BeJs ',
     animatedby: [
       {
         name: 'Ivan Dalmet',
@@ -60,7 +60,7 @@ const confList = [
   },
   {
     city: 'Bordeaux, France 🇫🇷',
-    description: 'Meetup BordeauxJS',
+    title: 'Meetup BordeauxJS',
     animatedby: [
       {
         name: 'Hugo Pérard',
@@ -82,7 +82,7 @@ const confList = [
   },
   {
     city: 'Zenika, Nantes, France 🇫🇷',
-    description: 'Meetup NantesJs',
+    title: 'Meetup NantesJs',
     animatedby: [
       {
         name: 'Hugo Pérard',
@@ -104,7 +104,7 @@ const confList = [
   },
   {
     city: 'Kindarena, Rouen, France 🇫🇷',
-    description: ' Meetup Codeurs en Seine',
+    title: ' Meetup Codeurs en Seine',
     animatedby: [
       {
         name: 'Ivan Dalmet',
@@ -131,85 +131,78 @@ const PastConeferences = () => {
     <div className="flex flex-1 flex-col lg:flex-row">
       <FixedSidebar />
       <PageContainer>
-        <div className="-mb-10">
-          <Link
-            href="/"
-            className="inline-flex w-fit items-center gap-x-1.5 rounded-md bg-gray-200 px-2.5 py-1.5 font-medium text-black shadow-sm  "
-          >
-            <LuArrowLeft className="-ml-0.5 h-5 w-5" aria-hidden="true" />
-            Back
-          </Link>
-        </div>
+        <Link
+          href="/"
+          className=" -mb-10 inline-flex w-fit items-center gap-x-1.5 rounded-md bg-gray-200 px-2.5 py-1.5 font-medium text-black shadow-sm  "
+        >
+          <LuArrowLeft className="-ml-0.5 h-5 w-5" aria-hidden="true" />
+          Back
+        </Link>
 
-        <Section className="gap-24" id="conferences">
-          <h2 className=" -mb-16  text-3xl font-semibold">
-            Choose your own adventure
-          </h2>
-          {confList.map((conf) => (
-            <Section key={conf.date}>
-              <SectionTitle>
-                <p className="flex items-start gap-1 text-xl">
-                  {conf.description}
-                </p>
-              </SectionTitle>
-              <div
-                className={cn(
-                  'relative z-10 max-w-[1000px] rounded-xl shadow-[0_0_100px] shadow-talk-500/30 dark:bg-gray-900'
-                )}
-              >
-                <Caroussel images={conf.images} folder={conf.folder} />
-              </div>
-              <div className="prose-invert relative prose-p:my-3">
-                <p className="flex items-center gap-4 pl-2 font-thin">
-                  <LuCalendarDays size={25} />
-                  <time dateTime={conf.dateFormatISO}>{conf.date} </time>{' '}
-                </p>
-                <p className="flex items-center gap-4 pl-2 font-thin text-white">
-                  <LuMapPin size={25} />
-                  {conf.city}
-                </p>
-                <div className=" mt-5 grid grid-cols-1 gap-8  lg:grid-cols-2">
-                  {conf.animatedby.map((person) => (
-                    <div
-                      className="flex w-full items-center space-x-5 "
-                      key={person.name}
-                    >
-                      <a
-                        href={person.profile}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label={person.name}
-                      >
-                        <Image
-                          height={500}
-                          width={500}
-                          className="inline-block h-12 w-12 rounded-full"
-                          src={person.picture}
-                          alt=""
-                        />
-                      </a>
-                      <div className="items-center  leading-none">
-                        <p>{person.name}</p>
-                        <p className=" text-sm text-gray-400">{person.role}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              {conf.video && (
-                <div className="mt-5 flex space-x-4">
-                  <a
-                    target="_blank"
-                    href={conf.video}
-                    className="gradient-youtube inline-flex w-fit items-center gap-x-1.5 rounded-md px-2.5 py-1.5 font-medium text-white shadow-sm"
-                  >
-                    <LuYoutube /> Replay
-                  </a>
-                </div>
+        <h2 className="-mb-8 text-3xl font-semibold xl:-mb-16">
+          Choose your own adventure
+        </h2>
+        {confList.map((conf) => (
+          <Section key={conf.date}>
+            <SectionTitle className="flex items-start gap-1 text-xl">
+              {conf.title}
+            </SectionTitle>
+            <div
+              className={cn(
+                'relative z-10 max-w-[1000px] rounded-xl shadow-[0_0_100px] shadow-talk-500/30 dark:bg-gray-900'
               )}
-            </Section>
-          ))}
-        </Section>
+            >
+              <Caroussel images={conf.images} folder={conf.folder} />
+            </div>
+            <div className="text-[#D1D5DB] prose-p:my-3">
+              <div className="my-3 flex items-center gap-4 pl-2 font-thin">
+                <LuCalendarDays size={25} />
+                <time dateTime={conf.dateFormatISO}>{conf.date} </time>
+              </div>
+              <p className="flex items-center gap-4 pl-2 font-thin">
+                <LuMapPin size={25} />
+                {conf.city}
+              </p>
+              <div className="mt-5 grid grid-cols-1 gap-8 lg:grid-cols-2">
+                {conf.animatedby.map((person) => (
+                  <div
+                    className="flex w-full items-center space-x-5"
+                    key={person.name}
+                  >
+                    <Link
+                      href={person.profile}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={person.name}
+                    >
+                      <Image
+                        height={500}
+                        width={500}
+                        className="inline-block h-12 w-12 rounded-full"
+                        src={person.picture}
+                        alt={person.name}
+                      />
+                    </Link>
+                    <div className="items-center leading-none">
+                      <p>{person.name}</p>
+                      <p className=" text-sm text-gray-400">{person.role}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {conf.video && (
+                <Link
+                  target="_blank"
+                  href={conf.video}
+                  className="gradient-youtube mt-5 inline-flex w-fit items-center gap-x-1.5 space-x-4 rounded-md px-2.5 py-1.5 font-medium text-white shadow-sm"
+                >
+                  <LuYoutube /> Replay
+                </Link>
+              )}
+            </div>
+          </Section>
+        ))}
       </PageContainer>
     </div>
   );
