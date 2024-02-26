@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { FixedSidebar, PageContainer } from '../../page';
-import { Section, SectionContent, SectionTitle } from '@/components/Section';
+import { Section, SectionTitle } from '@/components/Section';
 import {
   LuArrowLeft,
   LuCalendarDays,
