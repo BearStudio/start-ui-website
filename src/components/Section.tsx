@@ -1,5 +1,6 @@
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
+import Link from 'next/link';
 import { HTMLAttributes, ReactNode } from 'react';
 
 export type SectionProps = HTMLAttributes<HTMLElement>;
@@ -33,7 +34,7 @@ export type SectionImageProps = {
 
 export const SectionImage = (props: SectionImageProps) => {
   return (
-    <a
+    <Link
       href={props.href}
       target="_blank"
       className={cn(
@@ -50,7 +51,7 @@ export const SectionImage = (props: SectionImageProps) => {
         height="500"
         priority={true}
       />
-    </a>
+    </Link>
   );
 };
 
