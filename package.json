@@ -17,7 +17,6 @@
     "@vercel/analytics": "1.1.1",
     "autoprefixer": "10.4.16",
     "clsx": "2.0.0",
-    "embla-carousel-react": "8.0.0-rc23",
     "eslint": "8.56.0",
     "eslint-config-next": "14.0.4",
     "next": "14.0.4",
