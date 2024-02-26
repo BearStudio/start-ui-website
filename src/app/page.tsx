@@ -298,9 +298,10 @@ export default function Home() {
               className="rounded-xl"
               alt="Event Image"
               sizes="95vw, (min-width: 640px) 32rem, (min-width: 1024px) 45vw, (min-width: 1280px) 1000px"
-              src="/Talk.jpg"
+              src="/talk.jpg"
               width="1000"
               height="500"
+              priority
             />
           </div>
           <SectionContent>
@@ -356,7 +357,7 @@ export default function Home() {
               className="inline-flex w-fit  items-center gap-x-1.5 rounded-md  bg-gradient-to-r from-purple-400 to-purple-500 px-2.5 py-1.5 font-medium text-black shadow-sm md:w-fit lg:w-fit"
             >
               <LuMic2 />
-              Past conferences
+              Check past talks
             </Link>
           </div>
         </Section>

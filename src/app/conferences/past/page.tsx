@@ -11,11 +11,11 @@ import {
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
-import Caroussel from '@/components/Caroussel';
 const confList = [
   {
     city: 'Indy, Lyon, France 🇫🇷',
     title: 'Meetup LyonJS',
+    image: '/lyon.jpg',
     animatedby: [
       {
         name: 'Ivan Dalmet',
@@ -30,15 +30,14 @@ const confList = [
         profile: 'https://www.bearstudio.fr/team/yoann-fleury',
       },
     ],
-    folder: 'LyonJS',
     date: 'October 11, 2023',
     dateFormatISO: '2024-10-11',
     video: 'https://www.youtube.com/watch?v=kJAH7dtytxM',
-    images: ['Lyon1.jpg', 'Lyon2.jpg', 'Lyon3.jpg'],
   },
   {
     city: 'BeCentral, Brussels, Belgium 🇧🇪',
     title: 'Meetup BeJs ',
+    image: '/brussels.jpg',
     animatedby: [
       {
         name: 'Ivan Dalmet',
@@ -53,14 +52,13 @@ const confList = [
         profile: 'https://www.bearstudio.fr/team/fabien-essid',
       },
     ],
-    folder: 'BeJS',
     date: 'September 6, 2023',
     dateFormatISO: '2023-09-06',
-    images: ['Brussels1.jpg', 'Brussels2.jpg', 'Brussels3.jpg'],
   },
   {
     city: 'Bordeaux, France 🇫🇷',
     title: 'Meetup BordeauxJS',
+    image: '/bordeaux.jpg',
     animatedby: [
       {
         name: 'Hugo Pérard',
@@ -75,14 +73,13 @@ const confList = [
         profile: 'https://www.bearstudio.fr/team/quentin-lerebours',
       },
     ],
-    folder: 'BordeauxJS',
     date: 'July 11, 2023',
     dateFormatISO: '2023-07-11',
-    images: ['Bordeaux1.jpg'],
   },
   {
     city: 'Zenika, Nantes, France 🇫🇷',
     title: 'Meetup NantesJs',
+    image: '/nantes.jpg',
     animatedby: [
       {
         name: 'Hugo Pérard',
@@ -97,14 +94,13 @@ const confList = [
         profile: 'https://www.bearstudio.fr/team/yoann-fleury',
       },
     ],
-    folder: 'NantesJS',
     date: 'Mars 16, 2023',
     dateFormatISO: '2023-03-16',
-    images: ['Nantes1.jpg', 'Nantes2.jpg'],
   },
   {
     city: 'Kindarena, Rouen, France 🇫🇷',
     title: ' Meetup Codeurs en Seine',
+    image: '/coudeur.jpg',
     animatedby: [
       {
         name: 'Ivan Dalmet',
@@ -119,11 +115,9 @@ const confList = [
         profile: 'https://www.bearstudio.fr/team/quentin-lerebours',
       },
     ],
-    folder: 'CoudeurEnSeine',
     video: 'https://www.youtube.com/watch?v=5yk34hF40Ok',
     date: 'November 17, 2022',
     dateFormatISO: '2022-11-17',
-    images: ['Coudeur1.jpg', 'Coudeur2.jpg', 'Coudeur3.jpg'],
   },
 ];
 const PastConeferences = () => {
@@ -152,7 +146,15 @@ const PastConeferences = () => {
                 'relative z-10 max-w-[1000px] rounded-xl shadow-[0_0_100px] shadow-talk-500/30 dark:bg-gray-900'
               )}
             >
-              <Caroussel images={conf.images} folder={conf.folder} />
+              <Image
+                className="rounded-xl"
+                alt={conf.title}
+                sizes="95vw, (min-width: 640px) 32rem, (min-width: 1024px) 45vw, (min-width: 1280px) 1000px"
+                src={conf.image}
+                width="1000"
+                height="500"
+                priority
+              />
             </div>
             <div className="text-[#D1D5DB] prose-p:my-3">
               <div className="my-3 flex items-center gap-4 pl-2 font-thin">
@@ -181,6 +183,7 @@ const PastConeferences = () => {
                         className="inline-block h-12 w-12 rounded-full"
                         src={person.picture}
                         alt={person.name}
+                        priority
                       />
                     </Link>
                     <div className="items-center leading-none">
@@ -197,7 +200,7 @@ const PastConeferences = () => {
                   href={conf.video}
                   className="gradient-youtube mt-5 inline-flex w-fit items-center gap-x-1.5 space-x-4 rounded-md px-2.5 py-1.5 font-medium text-white shadow-sm"
                 >
-                  <LuYoutube /> Replay
+                  <LuYoutube /> Watch the replay
                 </Link>
               )}
             </div>
