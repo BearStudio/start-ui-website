@@ -136,7 +136,7 @@ const PastConeferences = () => {
         <h2 className="-mb-8 text-3xl font-semibold xl:-mb-16">
           Choose your own adventure
         </h2>
-        {confList.map((conf) => (
+        {confList.map((conf, index) => (
           <Section key={conf.date}>
             <SectionTitle className="flex items-start gap-1 text-xl">
               {conf.title}
@@ -153,7 +153,7 @@ const PastConeferences = () => {
                 src={conf.image}
                 width="1000"
                 height="500"
-                priority
+                priority={index === 0 ? true : false}
               />
             </div>
             <div className="text-[#D1D5DB] prose-p:my-3">
@@ -183,7 +183,6 @@ const PastConeferences = () => {
                         className="inline-block h-12 w-12 rounded-full"
                         src={person.picture}
                         alt={person.name}
-                        priority
                       />
                     </Link>
                     <div className="items-center leading-none">
