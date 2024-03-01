@@ -49,6 +49,7 @@ export const SectionImage = (props: SectionImageProps) => {
         src={props.src}
         width="1000"
         height="500"
+        priority={props.src === '/web.jpg' ? true : false}
       />
     </Link>
   );
