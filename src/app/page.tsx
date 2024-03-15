@@ -285,8 +285,8 @@ export default function Home() {
         </Section>
         <Section>
           <SectionTitle>
-            <Link className="text-3xl font-medium" href="/conferences/past">
-              Our talk
+            <Link className="text-3xl font-medium" href="/talks/past">
+              Talks
             </Link>
           </SectionTitle>
           <div
@@ -352,7 +352,7 @@ export default function Home() {
           </SectionContent>
           <div className="flex flex-col space-y-4  md:flex-row md:space-x-4 lg:flex-row lg:space-x-4 lg:space-y-0">
             <Link
-              href="/conferences/past"
+              href="/talks/past"
               className="inline-flex w-fit  items-center gap-x-1.5 rounded-md  bg-gradient-to-r from-purple-400 to-purple-500 px-2.5 py-1.5 font-medium text-black shadow-sm md:w-fit lg:w-fit"
             >
               <LuMic2 />
