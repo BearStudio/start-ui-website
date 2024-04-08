@@ -20,13 +20,13 @@ const confList = [
       {
         name: 'Ivan Dalmet',
         picture: 'https://avatars.githubusercontent.com/u/9749061?v=4',
-        role: 'Co-founder - Lead Designer',
+        role: 'Co-founder, Lead Designer',
         profile: 'https://www.bearstudio.fr/team/ivan-dalmet',
       },
       {
         name: 'Yoann Fleury',
         picture: 'https://avatars.githubusercontent.com/u/3920615?v=4',
-        role: 'Lead Front End, Streamer, Marketing',
+        role: 'Lead Front-End, Streamer, Marketing',
         profile: 'https://www.bearstudio.fr/team/yoann-fleury',
       },
     ],
@@ -42,7 +42,7 @@ const confList = [
       {
         name: 'Ivan Dalmet',
         picture: 'https://avatars.githubusercontent.com/u/9749061?v=4',
-        role: 'Co-founder - Lead Designer',
+        role: 'Co-founder, Lead Designer',
         profile: 'https://www.bearstudio.fr/team/ivan-dalmet',
       },
       {
@@ -63,7 +63,7 @@ const confList = [
       {
         name: 'Hugo Pérard',
         picture: 'https://avatars.githubusercontent.com/u/48803115?v=4',
-        role: 'Front Developer',
+        role: 'Front-End Developer',
         profile: 'https://www.bearstudio.fr/team/hugo-perard',
       },
       {
@@ -84,17 +84,17 @@ const confList = [
       {
         name: 'Hugo Pérard',
         picture: 'https://avatars.githubusercontent.com/u/48803115?v=4',
-        role: 'Front Developer',
+        role: 'Front-End Developer',
         profile: 'https://www.bearstudio.fr/team/hugo-perard',
       },
       {
         name: 'Yoann Fleury',
         picture: 'https://avatars.githubusercontent.com/u/3920615?v=4',
-        role: 'Lead Front End, Streamer, Marketing',
+        role: 'Lead Front-End, Streamer, Marketing',
         profile: 'https://www.bearstudio.fr/team/yoann-fleury',
       },
     ],
-    date: 'Mars 16, 2023',
+    date: 'March 16, 2023',
     dateFormatISO: '2023-03-16',
   },
   {
@@ -105,7 +105,7 @@ const confList = [
       {
         name: 'Ivan Dalmet',
         picture: 'https://avatars.githubusercontent.com/u/9749061?v=4',
-        role: 'Co-founder - Lead Designer',
+        role: 'Co-founder, Lead Designer',
         profile: 'https://www.bearstudio.fr/team/ivan-dalmet',
       },
       {
