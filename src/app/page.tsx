@@ -306,12 +306,12 @@ export default function Home() {
           <SectionContent>
             <p>
               <span className="font-bold">Choose your own adventure</span> is
-              the name of our Start UI presentation, where we discuss the ins
-              and outs of Start UI. We share our technical choices and the best
-              practices we&apos;ve implemented in our web application starter,
-              🚀 Start UI, which has accumulated over 1260 stars. Our journey is
-              the result of years of experimentation across different projects,
-              where we&apos;ve cherry-picked the most effective strategies.
+              the name of our Start UI 🚀 presentation, where we discuss the ins
+              and outs . We share our technical choices and the best practices
+              we&apos;ve implemented in our web application starter,which has
+              accumulated over 1200 stars. Our journey is the result of years of
+              experimentation across different projects, during which we&apos;ve
+              cherry-picked the most effective strategies.
             </p>
             <p>
               Follow us on social media to stay updated about our upcoming
