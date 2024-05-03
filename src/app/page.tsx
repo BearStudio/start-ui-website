@@ -132,11 +132,11 @@ export default function Home() {
               </a>
               ,{' '}
               <a
-                href="https://formiz-react.com/"
+                href="https://react-hook-form.com/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Formiz
+                React Hook Form
               </a>
               ,{' '}
               <a
