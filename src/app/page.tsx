@@ -376,9 +376,9 @@ export function FixedSidebar() {
       <div className="flex flex-1 flex-col overflow-y-auto overflow-x-hidden">
         <div className="relative mx-auto flex max-w-md flex-1 flex-col px-8">
           <div className="relative flex flex-1 flex-col items-center justify-center gap-8 py-16 text-center [text-wrap:balance]">
-            <a href="/" aria-label="Go to the website root">
+            <Link href="/" aria-label="Go to the website root">
               <Logo className="h-12" />
-            </a>
+            </Link>
             <div className="flex flex-col gap-2">
               <h1 className="gradient-text-rgb bg-clip-text text-3xl font-bold leading-tight text-transparent">
                 Opinionated UI starters

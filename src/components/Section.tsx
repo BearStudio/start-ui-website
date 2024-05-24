@@ -34,7 +34,7 @@ export type SectionImageProps = {
 
 export const SectionImage = (props: SectionImageProps) => {
   return (
-    <Link
+    <a
       href={props.href}
       target="_blank"
       className={cn(
@@ -51,7 +51,7 @@ export const SectionImage = (props: SectionImageProps) => {
         height="500"
         priority={props.src === '/web.jpg' ? true : false}
       />
-    </Link>
+    </a>
   );
 };
 
