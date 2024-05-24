@@ -125,13 +125,13 @@ const PastConeferences = () => {
     <div className="flex flex-1 flex-col lg:flex-row">
       <FixedSidebar />
       <PageContainer>
-        <Link
+        <a
           href="/"
           className=" -mb-10 inline-flex w-fit items-center gap-x-1.5 rounded-md bg-gray-200 px-2.5 py-1.5 font-medium text-black shadow-sm  "
         >
           <LuArrowLeft className="-ml-0.5 h-5 w-5" aria-hidden="true" />
           Back
-        </Link>
+        </a>
 
         <h2 className="-mb-8 text-3xl font-semibold xl:-mb-16">
           Choose your own adventure
@@ -148,7 +148,7 @@ const PastConeferences = () => {
             >
               <Image
                 className="rounded-xl"
-                alt={conf.title}
+                alt=""
                 sizes="95vw, (min-width: 640px) 32rem, (min-width: 1024px) 45vw, (min-width: 1280px) 1000px"
                 src={conf.image}
                 width="1000"
@@ -171,7 +171,7 @@ const PastConeferences = () => {
                     className="flex w-full items-center space-x-5"
                     key={person.name}
                   >
-                    <Link
+                    <a
                       href={person.profile}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -182,9 +182,9 @@ const PastConeferences = () => {
                         width={500}
                         className="inline-block h-12 w-12 rounded-full"
                         src={person.picture}
-                        alt={person.name}
+                        alt=""
                       />
-                    </Link>
+                    </a>
                     <div className="items-center leading-none">
                       <p>{person.name}</p>
                       <p className=" text-sm text-gray-400">{person.role}</p>
@@ -194,13 +194,13 @@ const PastConeferences = () => {
               </div>
 
               {conf.video && (
-                <Link
+                <a
                   target="_blank"
                   href={conf.video}
                   className="gradient-youtube mt-5 inline-flex w-fit items-center gap-x-1.5 space-x-4 rounded-md px-2.5 py-1.5 font-medium text-white shadow-sm"
                 >
                   <LuYoutube /> Watch the replay
-                </Link>
+                </a>
               )}
             </div>
           </Section>
