@@ -78,27 +78,35 @@ export default function Home() {
               </a>
               ,{' '}
               <a
-                href="https://nextjs.org/"
+                href="https://tanstack.com/start/latest"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                NextJS
+                Tanstack Start
               </a>
               ,{' '}
               <a
-                href="https://chakra-ui.com/"
+                href="https://tailwindcss.com/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Chakra UI
+                Tailwind CSS
               </a>
               ,{' '}
               <a
-                href="https://trpc.io/"
+                href="https://tailwindcss.com/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                tRPC
+                Tailwind CSS
+              </a>
+              ,{' '}
+              <a
+                href="https://ui.shadcn.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Shadcn/ui
               </a>
               ,{' '}
               <a
@@ -256,7 +264,7 @@ export default function Home() {
           <SectionTitle>
             <a target="_blank" href="http://figma.start-ui.com/">
               <LogoFigma className="h-8" />
-              <span className="sr-only">Start UI Web</span>
+              <span className="sr-only">Start UI Figma</span>
             </a>
           </SectionTitle>
           <SectionImage
@@ -368,11 +376,16 @@ export default function Home() {
 
 export function FixedSidebar() {
   return (
-    <div className="relative z-20 flex min-h-[90vh] flex-1 flex-col overflow-hidden bg-gray-950 lg:fixed lg:bottom-0 lg:left-0 lg:top-0 lg:w-[36rem]">
-      {/* GRADIENT */}
-      <div className="gradient-text-rgb absolute left-1/2 top-0 h-[300px] w-[300px] -translate-x-1/2 -translate-y-2/3 opacity-60 blur-[80px] lg:left-auto lg:right-0 lg:h-[500px] lg:w-[500px] lg:translate-x-1/2 lg:blur-[100px]" />
-      <div className="gradient-text-rgb absolute bottom-0 left-1/2 h-[300px] w-[300px] -translate-x-1/2 translate-y-2/3 opacity-40 blur-[80px] lg:left-auto lg:right-0 lg:h-[500px] lg:w-[500px] lg:translate-x-1/2 lg:blur-[100px]" />
-
+    <div className="relative z-20 flex min-h-[90vh] flex-1 flex-col overflow-hidden bg-black lg:fixed lg:bottom-0 lg:left-0 lg:top-0 lg:w-[36rem]">
+      <div className="pointer-events-none absolute inset-0">
+        <Image
+          className="h-full w-full max-w-none object-cover"
+          src="/space-bg.jpg"
+          alt=""
+          width={1536}
+          height={1024}
+        />
+      </div>
       <div className="flex flex-1 flex-col overflow-y-auto overflow-x-hidden">
         <div className="relative mx-auto flex max-w-md flex-1 flex-col px-8">
           <div className="relative flex flex-1 flex-col items-center justify-center gap-8 py-16 text-center [text-wrap:balance]">
