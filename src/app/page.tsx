@@ -110,6 +110,14 @@ export default function Home() {
               </a>
               ,{' '}
               <a
+                href="https://www.better-auth.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Better Auth
+              </a>
+              ,{' '}
+              <a
                 href="https://tanstack.com/query/latest"
                 target="_blank"
                 rel="noopener noreferrer"
