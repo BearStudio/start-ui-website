@@ -94,14 +94,6 @@ export default function Home() {
               </a>
               ,{' '}
               <a
-                href="https://tailwindcss.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Tailwind CSS
-              </a>
-              ,{' '}
-              <a
                 href="https://ui.shadcn.com/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -194,7 +186,7 @@ export default function Home() {
           <SectionImage
             src="/native.jpg"
             alt="Start UI Web"
-            href="http://web.start-ui.com/"
+            href="http://native.start-ui.com/"
             className="shadow-native-500/30 group-hover:shadow-native-500/40"
           />
           <SectionContent>
@@ -236,18 +228,18 @@ export default function Home() {
               ,{' '}
               <a
                 target="_blank"
-                href="https://www.zodios.org/"
+                href="https://github.com/hey-api/openapi-ts"
                 rel="noopener noreferrer"
               >
-                Zodios
+                HeyAPI
               </a>
               ,{' '}
               <a
                 target="_blank"
-                href="https://formiz-react.com/"
+                href="https://tanstack.com/form/latest"
                 rel="noopener noreferrer"
               >
-                Formiz
+                TanStack Form
               </a>{' '}
               and more.
             </p>
