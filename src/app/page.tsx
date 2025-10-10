@@ -182,6 +182,14 @@ export default function Home() {
             >
               <LuPlayCircle /> Demo
             </a>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://docs.web.start-ui.com/"
+              className="inline-flex items-center underline"
+            >
+              Documentation
+            </a>
           </div>
         </Section>
         <Section id="native">
