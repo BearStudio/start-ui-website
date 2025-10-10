@@ -1,6 +1,5 @@
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
-import Link from 'next/link';
 import { HTMLAttributes, ReactNode } from 'react';
 
 export type SectionProps = HTMLAttributes<HTMLElement>;
@@ -9,7 +8,10 @@ export const Section = (props: SectionProps) => {
   return (
     <article
       {...props}
-      className={cn('group flex w-full flex-col gap-3', props.className)}
+      className={cn(
+        'group flex w-full scroll-mt-8 flex-col gap-3',
+        props.className
+      )}
     />
   );
 };
