@@ -125,13 +125,13 @@ const PastConeferences = () => {
     <div className="flex flex-1 flex-col lg:flex-row">
       <FixedSidebar />
       <PageContainer>
-        <a
+        <Link
           href="/"
           className=" -mb-10 inline-flex w-fit items-center gap-x-1.5 rounded-md bg-gray-200 px-2.5 py-1.5 font-medium text-black shadow-sm  "
         >
           <LuArrowLeft className="-ml-0.5 h-5 w-5" aria-hidden="true" />
           Back
-        </a>
+        </Link>
 
         <h2 className="-mb-8 text-3xl font-semibold xl:-mb-16">
           Choose your own adventure
