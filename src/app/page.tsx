@@ -16,8 +16,8 @@ import {
   LuExternalLink,
   LuFigma,
   LuGithub,
-  LuPlayCircle,
-  LuMic2,
+  LuCirclePlay,
+  LuMicVocal,
 } from 'react-icons/lu';
 
 export default function Home() {
@@ -167,7 +167,7 @@ export default function Home() {
               , and more.
             </p>
           </SectionContent>
-          <div className="flex space-x-4">
+          <div className="flex flex-wrap gap-4">
             <a
               target="_blank"
               href="http://web.start-ui.com/"
@@ -180,7 +180,7 @@ export default function Home() {
               href="http://demo.start-ui.com/"
               className="inline-flex w-fit items-center gap-x-1.5 rounded-md bg-black px-2.5 py-1.5 font-medium text-white shadow-[0_0_60px] shadow-web-500/40 transition hover:shadow-web-500/60"
             >
-              <LuPlayCircle /> Demo
+              <LuCirclePlay /> Demo
             </a>
             <a
               target="_blank"
@@ -371,7 +371,7 @@ export default function Home() {
               href="/talks/past"
               className="inline-flex w-fit  items-center gap-x-1.5 rounded-md  bg-gradient-to-r from-purple-400 to-purple-500 px-2.5 py-1.5 font-medium text-black shadow-sm md:w-fit lg:w-fit"
             >
-              <LuMic2 />
+              <LuMicVocal />
               Check past talks
             </a>
           </div>
