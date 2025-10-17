@@ -1,0 +1,31 @@
+---
+import { cn } from "@/lib/utils";
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
+
+interface Props {
+  href: string;
+  class?: string;
+  alt: string;
+  src: ImageMetadata;
+}
+const { href, alt, src, class: className } = Astro.props;
+---
+
+<a
+  href={href}
+  target="_blank"
+  class={cn(
+    "relative z-10 block max-w-[1000px] rounded-xl shadow-[0_0_300px] shadow-white/90 transition group-hover:shadow-[0_0_300px_20px] dark:bg-gray-900",
+    className,
+  )}
+>
+  <Image
+    class="rounded-xl shadow-2xl shadow-black/50"
+    alt={alt}
+    sizes="95vw, (min-width: 640px) 32rem, (min-width: 1024px) 45vw, (min-width: 1280px) 1000px"
+    src={src}
+    width="1000"
+    height="500"
+  />
+</a>

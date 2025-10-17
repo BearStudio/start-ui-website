@@ -1,9 +1,9 @@
-import { cn } from '@/lib/utils';
-import { SVGProps } from 'react';
+import { cn } from "@/lib/utils";
+import type { SVGProps } from "react";
 
 export function LogoFigma(props: SVGProps<SVGSVGElement>) {
   return (
-    <svg viewBox="0 0 710 116" className={cn('max-w-full', props.className)}>
+    <svg viewBox="0 0 710 116" className={cn("max-w-full", props.className)}>
       <path
         d="M50.7588 0.876332C42.9004 -0.61177 34.7609 -0.242542 27.1724 2.27492C15.2343 6.23854 1.32814 16.3392 0.130395 41.7908C-2.0008 87.0408 22.2099 110.828 56.801 115.664C82.9488 119.32 100.583 92.1904 107.629 78.7416C111.248 71.9002 113.093 64.268 112.996 56.5375C112.698 38.9404 103.474 10.8539 50.7588 0.876332Z"
         fill="url(#paint0_linear_324_2207)"

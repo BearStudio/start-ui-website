@@ -1,0 +1,361 @@
+---
+import { LogoWeb } from "@/components/LogoWeb";
+import PageContainer from "@/components/pageContainer/index.astro";
+import Section from "@/components/Section/index.astro";
+import SectionTitle from "@/components/Section/title.astro";
+import SectionImage from "@/components/Section/sectionImage.astro";
+import SectionContent from "@/components/Section/content.astro";
+import { LuCirclePlay, LuFigma, LuGithub, LuMicVocal } from "react-icons/lu";
+import { LogoNative } from "@/components/LogoNative";
+import { LogoFigma } from "@/components/LogoFigma";
+import { Image } from "astro:assets";
+import Testimonials from "@/components/Testimonials/index.astro";
+import { cn } from "@/lib/utils";
+import Layout from "@/layouts/Layout.astro";
+import FixedSideBar from "@/components/fixedSideBar/index.astro";
+import web from "@/assets/web.jpg";
+import native from "@/assets/native.jpg";
+import figma from "@/assets/figma.jpg";
+import talks from "@/assets/talk.jpg";
+import SEO from "@/components/Seo/index.astro";
+---
+
+<Layout>
+  <SEO />
+  <div class="flex flex-1 flex-col lg:flex-row">
+    <FixedSideBar />
+    <PageContainer>
+      <Section>
+        <SectionTitle>
+          <a href="http://web.start-ui.com/" target="_blank">
+            <LogoWeb className="h-8" />
+            <span class="sr-only">Start UI Web</span>
+          </a>
+        </SectionTitle>
+        <SectionImage
+          src={web}
+          alt="Start UI Web"
+          href="http://web.start-ui.com/"
+          class="shadow-web-500/30 group-hover:shadow-web-500/40"
+        />
+        <SectionContent>
+          <p>
+            Our free and open source UI web app starter offers a quick and easy
+            way to bootstrap your next project. It includes best practices &
+            production ready tools to help you get started right away, saving
+            you time and effort in the initial setup phase.
+          </p>
+          <p>
+            Comes with built-in features like 🔐 Authentication, 📱Responsive
+            Layout, 🧑‍💻 User Management, 🇫🇷 Internationalization & Right-to-Left
+            support, 🌚 Dark Mode, 🎛 Advanced components for easy development.
+            You can try out the{" "}
+            <a
+              href="https://demo.start-ui.com"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              demo app
+            </a>
+            .
+          </p>
+          <p>
+            Ready to use with{" "}
+            <a
+              href="https://www.typescriptlang.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="font-medium"
+            >
+              TypeScript</a
+            >,
+            <a
+              href="https://react.dev/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              React</a
+            >,
+            <a
+              href="https://tanstack.com/start/latest"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Tanstack Start</a
+            >,
+            <a
+              href="https://tailwindcss.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Tailwind CSS</a
+            >,
+            <a
+              href="https://ui.shadcn.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Shadcn/ui</a
+            >,
+            <a
+              href="https://www.prisma.io/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Prisma</a
+            >,
+            <a
+              href="https://www.better-auth.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Better Auth</a
+            >,
+            <a
+              href="https://tanstack.com/query/latest"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              TanStack Query</a
+            >,
+            <a
+              href="https://storybook.js.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Storybook</a
+            >,
+            <a
+              href="https://playwright.dev/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Playwright</a
+            >,
+            <a
+              href="https://react-hook-form.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              React Hook Form</a
+            >,
+            <a
+              href="https://react.i18next.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              React i18next</a
+            >,
+            <a
+              href="https://react.email/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              React Email</a
+            >, and more.
+          </p>
+        </SectionContent>
+        <div class="flex flex-wrap gap-4">
+          <a
+            target="_blank"
+            href="http://web.start-ui.com/"
+            class="gradient-web inline-flex w-fit items-center gap-x-1.5 rounded-md px-2.5 py-1.5 font-medium text-black shadow-sm"
+          >
+            <LuGithub /> Get on GitHub
+          </a>
+          <a
+            target="_blank"
+            href="http://demo.start-ui.com/"
+            class="inline-flex w-fit items-center gap-x-1.5 rounded-md bg-black px-2.5 py-1.5 font-medium text-white shadow-[0_0_60px] shadow-web-500/40 transition hover:shadow-web-500/60"
+          >
+            <LuCirclePlay /> Demo
+          </a>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://docs.web.start-ui.com/"
+            class="inline-flex items-center underline"
+          >
+            Documentation
+          </a>
+        </div>
+      </Section>
+      <Section>
+        <SectionTitle>
+          <a target="_blank" href="http://native.start-ui.com/">
+            <LogoNative className="h-8" />
+            <span class="sr-only">Start UI Native</span>
+          </a>
+        </SectionTitle>
+        <SectionImage
+          src={native}
+          alt="Start UI Web"
+          href="http://native.start-ui.com/"
+          class="shadow-native-500/30 group-hover:shadow-native-500/40"
+        />
+        <SectionContent>
+          <p>
+            Our free and open source UI native app starter offers a quick and
+            easy way to bootstrap your next mobile application. It includes best
+            practices & production ready tools to help you get started right
+            away, saving you time and effort in the initial setup phase.
+          </p>
+          <p>
+            Comes with built-in features like 🔐 Authentication, 🌚 Dark Mode,
+            🛠️ Tooling to easily deploy to application stores.
+          </p>
+          <p>
+            Ready to use with{" "}
+            <a
+              href="https://www.typescriptlang.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              TypeScript</a
+            >,
+            <a
+              href="https://expo.dev/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Expo</a
+            >,
+            <a
+              href="https://ficus-ui.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Ficus UI</a
+            >,
+            <a
+              target="_blank"
+              href="https://github.com/hey-api/openapi-ts"
+              rel="noopener noreferrer"
+            >
+              HeyAPI</a
+            >,
+            <a
+              target="_blank"
+              href="https://tanstack.com/form/latest"
+              rel="noopener noreferrer"
+            >
+              TanStack Form</a
+            >
+            and more.
+          </p>
+        </SectionContent>
+        <a
+          target="_blank"
+          href="http://native.start-ui.com/"
+          class="gradient-native inline-flex w-fit items-center gap-x-1.5 rounded-md px-2.5 py-1.5 font-medium text-black shadow-sm"
+        >
+          <LuGithub /> Get on GitHub
+        </a>
+      </Section>
+      <Section>
+        <SectionTitle>
+          <a target="_blank" href="http://figma.start-ui.com/">
+            <LogoFigma className="h-8" />
+            <span class="sr-only">Start UI Figma</span>
+          </a>
+        </SectionTitle>
+        <SectionImage
+          src={figma}
+          alt="Start UI Figma"
+          href="http://figma.start-ui.com/"
+          class="shadow-figma-500/30 group-hover:shadow-figma-500/40"
+        />
+        <SectionContent>
+          <p>
+            Quick start designing your app in Figma with already designed &
+            developed components from Start UI [web] & [native].
+          </p>
+          <p>
+            Auto-layout, Components, Variants, Color Styles, Text, Styles,
+            Prototypes and more.
+          </p>
+        </SectionContent>
+        <a
+          target="_blank"
+          href="http://figma.start-ui.com/"
+          class="gradient-figma inline-flex w-fit items-center gap-x-1.5 rounded-md px-2.5 py-1.5 font-medium text-black shadow-sm"
+        >
+          <LuFigma /> Get on Figma
+        </a>
+      </Section>
+      <Section>
+        <SectionTitle>
+          <a class="text-3xl font-medium" href="/talks/past"> Talks </a>
+        </SectionTitle>
+        <div
+          class={cn(
+            "relative z-10 block h-auto max-w-[1000px] rounded-xl shadow-[0_0_300px] shadow-talk-500/30 group-hover:shadow-talk-500/40   dark:bg-gray-900",
+          )}
+        >
+          <Image
+            class="rounded-xl"
+            alt=""
+            sizes="95vw, (min-width: 640px) 32rem, (min-width: 1024px) 45vw, (min-width: 1280px) 1000px"
+            src={talks}
+            width="1000"
+            height="500"
+          />
+        </div>
+        <SectionContent>
+          <p>
+            <span class="font-bold">Choose your own adventure</span> is the name
+            of our Start UI 🚀 presentation, where we discuss the ins and outs .
+            We share our technical choices and the best practices we&apos;ve implemented
+            in our web application starter, which has accumulated over 1200 stars.
+            Our journey is the result of years of experimentation across different
+            projects, during which we&apos;ve cherry-picked the most effective strategies.
+          </p>
+          <p>
+            Follow us on social media to stay updated about our upcoming
+            meetups: <br />
+            <a
+              href="https://twitter.com/_BearStudio"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Twitter</a
+            >,
+            <a
+              href="https://www.linkedin.com/company/bearstudio/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Linkedin</a
+            >,
+            <a
+              href="https://www.instagram.com/_bearstudio/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Instagram</a
+            >,
+            <a
+              href="https://www.facebook.com/allyouneedisbear"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Facebook</a
+            > .
+          </p>
+        </SectionContent>
+        <div
+          class="flex flex-col space-y-4 md:flex-row md:space-x-4 lg:flex-row lg:space-x-4 lg:space-y-0"
+        >
+          <a
+            href="/talks/past"
+            class="inline-flex w-fit items-center gap-x-1.5 rounded-md bg-gradient-to-r from-purple-400 to-purple-500 px-2.5 py-1.5 font-medium text-black shadow-sm md:w-fit lg:w-fit"
+          >
+            <LuMicVocal />
+            Check past talks
+          </a>
+        </div>
+      </Section>
+      <Testimonials />
+    </PageContainer>
+  </div>
+</Layout>

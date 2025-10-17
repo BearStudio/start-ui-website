@@ -1,0 +1,18 @@
+---
+import { cn } from "@/lib/utils";
+
+interface Props {
+  class?: string;
+}
+
+const { class: className } = Astro.props;
+---
+
+<article
+  class={cn(
+    "group flex w-full scroll-mt-8 flex-col gap-3 max-w-4xl",
+    className,
+  )}
+>
+  <slot />
+</article>

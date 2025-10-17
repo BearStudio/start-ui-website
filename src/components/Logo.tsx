@@ -1,12 +1,12 @@
-import { cn } from '@/lib/utils';
-import { SVGProps } from 'react';
+import { cn } from "@/lib/utils";
+import type { SVGProps } from "react";
 
 export function Logo(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       viewBox="0 0 512 116"
       {...props}
-      className={cn('max-w-full', props.className)}
+      className={cn("max-w-full", props.className)}
     >
       <path
         d="M50.759.876C42.9-.612 34.76-.243 27.172 2.275 15.234 6.239 1.328 16.339.13 41.79-2 87.04 22.21 110.828 56.801 115.664c26.148 3.656 43.782-23.474 50.828-36.922a46.24 46.24 0 005.367-22.205c-.298-17.597-9.522-45.683-62.237-55.66z"

@@ -1,0 +1,107 @@
+---
+import PageContainer from "@/components/pageContainer/index.astro";
+import Section from "@/components/Section/index.astro";
+import SectionTitle from "@/components/Section/title.astro";
+import FixedSideBar from "@/components/fixedSideBar/index.astro";
+import {
+  LuArrowLeft,
+  LuCalendarDays,
+  LuMapPin,
+  LuYoutube,
+} from "react-icons/lu";
+import { cn } from "@/lib/utils";
+import { Image } from "astro:assets";
+import Layout from "@/layouts/Layout.astro";
+import { getTalksComputed } from "@/lib/conferences";
+import dayjs from "dayjs";
+
+const talks = await getTalksComputed();
+---
+
+<Layout>
+  <div class="flex flex-1 flex-col lg:flex-row">
+    <FixedSideBar />
+    <PageContainer>
+      <a
+        href="/"
+        class="-mb-10 inline-flex w-fit items-center gap-x-1.5 rounded-md bg-gray-200 px-2.5 py-1.5 font-medium text-black shadow-sm"
+      >
+        <LuArrowLeft className="-ml-0.5 h-5 w-5" aria-hidden="true" />
+        Back
+      </a>
+
+      <h2 class="-mb-8 text-3xl font-semibold xl:-mb-16">
+        Choose your own adventure
+      </h2>
+      {
+        talks.map((conf) => (
+          <Section>
+            <SectionTitle class="flex items-start gap-1 text-xl">
+              {conf.title}
+            </SectionTitle>
+            <div
+              class={cn(
+                "relative z-10 max-w-[1000px] rounded-xl shadow-[0_0_100px] shadow-talk-500/30 dark:bg-gray-900",
+              )}
+            >
+              <Image
+                class="rounded-xl"
+                alt=""
+                sizes="95vw, (min-width: 640px) 32rem, (min-width: 1024px) 45vw, (min-width: 1280px) 1000px"
+                src={conf.image}
+                width="1000"
+                height="500"
+              />
+            </div>
+            <div class="text-[#D1D5DB] prose-p:my-3">
+              <div class="my-3 flex items-center gap-4 pl-2 font-thin">
+                <LuCalendarDays size={25} />
+                <time datetime={dayjs(conf.date).toISOString()}>
+                  {dayjs(conf.date).format("MMMM DD, YYYY")}{" "}
+                </time>
+              </div>
+              <p class="flex items-center gap-4 pl-2 font-thin">
+                <LuMapPin size={25} />
+                {conf.city}
+              </p>
+              <div class="mt-5 grid grid-cols-1 gap-8 lg:grid-cols-2">
+                {conf._computed.speakers.map((person) => (
+                  <div class="flex w-full items-center space-x-5">
+                    <a
+                      href={person.data.profileUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={person.data.name}
+                    >
+                      <Image
+                        height={500}
+                        width={500}
+                        class="inline-block h-12 w-12 rounded-full"
+                        src={person.data.avatar}
+                        alt=""
+                      />
+                    </a>
+                    <div class="items-center leading-none">
+                      <p>{person.data.name}</p>
+                      <p class="text-sm text-gray-400">{person.data.role}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {conf.vod && (
+                <a
+                  target="_blank"
+                  href={conf.vod}
+                  class="gradient-youtube mt-5 inline-flex w-fit items-center gap-x-1.5 space-x-4 rounded-md px-2.5 py-1.5 font-medium text-white shadow-sm"
+                >
+                  <LuYoutube /> Watch the replay
+                </a>
+              )}
+            </div>
+          </Section>
+        ))
+      }
+    </PageContainer>
+  </div>
+</Layout>
