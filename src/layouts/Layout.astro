@@ -15,6 +15,15 @@ import "@fontsource/rubik/latin-300.css";
     <slot name="seo" />
   </head>
   <body class="flex min-h-screen flex-col bg-gray-950 font-rubrik text-white">
+    <div
+      class="justify-c pointer-events-none fixed left-0 right-0 top-0 z-[9999]"
+    >
+      <span
+        class="fixed left-0 top-0 h-10 w-full rounded-br-sm bg-slate-800 px-1.5 py-0.5 text-center text-2xl font-medium uppercase tracking-widest text-gray-300"
+      >
+        Start UI v3 is live!
+      </span>
+    </div>
     <slot />
   </body>
 </html>
