@@ -1,8 +1,8 @@
 ---
-import { Logo } from "@/components/Logo";
-import { LogoFigma } from "@/components/LogoFigma";
-import { LogoNative } from "@/components/LogoNative";
-import { LogoWeb } from "@/components/LogoWeb";
+import Logo from "@/components/logo.astro";
+import LogoFigma from "@/components/logoFigma.astro";
+import LogoNative from "@/components/logoNative.astro";
+import LogoWeb from "@/components/logoWeb.astro";
 import { Image } from "astro:assets";
 import spaceBg from "@/assets/space-bg.jpg";
 ---
@@ -25,7 +25,7 @@ import spaceBg from "@/assets/space-bg.jpg";
         class="relative flex flex-1 flex-col items-center justify-center gap-8 py-16 text-center [text-wrap:balance]"
       >
         <a href="/" aria-label="Go to the website root">
-          <Logo className="h-12" />
+          <Logo class="h-12" />
         </a>
         <div class="flex flex-col gap-2">
           <h1
@@ -40,13 +40,13 @@ import spaceBg from "@/assets/space-bg.jpg";
         </div>
         <div class="flex items-center justify-center gap-4">
           <a href="#web" aria-label="Go to the Start UI [web] section">
-            <LogoWeb className="w-52" />
+            <LogoWeb class="w-52" />
           </a>
           <a href="#native" aria-label="Go to the Start UI [native] section">
-            <LogoNative className="w-52" />
+            <LogoNative class="w-52" />
           </a>
           <a href="#figma" aria-label="Go to the Start UI [figma] section">
-            <LogoFigma className="w-52" />
+            <LogoFigma class="w-52" />
           </a>
         </div>
       </div>
@@ -54,7 +54,12 @@ import spaceBg from "@/assets/space-bg.jpg";
       <div class="flex items-center justify-center pb-4 lg:pb-6">
         <p class="flex items-baseline gap-x-1 text-white/50">
           From the{" "}
-          <a href="https://bearstudio.fr" class="text-white/80">
+          <a
+            href="https://bearstudio.fr"
+            class="text-white/80"
+            target="_blank"
+            rel="noreferrer"
+          >
             BearStudio Team
           </a>
         </p>
