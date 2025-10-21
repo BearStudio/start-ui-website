@@ -1,13 +1,12 @@
 ---
-import { LogoWeb } from "@/components/LogoWeb";
+import LogoWeb from "@/components/logoWeb.astro";
 import PageContainer from "@/components/pageContainer/index.astro";
-import Section from "@/components/Section/index.astro";
-import SectionTitle from "@/components/Section/title.astro";
-import SectionImage from "@/components/Section/sectionImage.astro";
-import SectionContent from "@/components/Section/content.astro";
-import { LuCirclePlay, LuFigma, LuGithub, LuMicVocal } from "react-icons/lu";
-import { LogoNative } from "@/components/LogoNative";
-import { LogoFigma } from "@/components/LogoFigma";
+import Section from "@/components/section/index.astro";
+import SectionTitle from "@/components/section/title.astro";
+import SectionImage from "@/components/section/sectionImage.astro";
+import SectionContent from "@/components/section/content.astro";
+import LogoNative from "@/components/logoNative.astro";
+import LogoFigma from "@/components/logoFigma.astro";
 import { Image } from "astro:assets";
 import Testimonials from "@/components/Testimonials/index.astro";
 import { cn } from "@/lib/utils";
@@ -18,6 +17,7 @@ import native from "@/assets/native.jpg";
 import figma from "@/assets/figma.jpg";
 import talks from "@/assets/talk.jpg";
 import SEO from "@/components/Seo/index.astro";
+import { Icon } from "astro-icon/components";
 ---
 
 <Layout>
@@ -28,7 +28,7 @@ import SEO from "@/components/Seo/index.astro";
       <Section>
         <SectionTitle>
           <a href="http://web.start-ui.com/" target="_blank">
-            <LogoWeb className="h-8" />
+            <LogoWeb class="h-8" />
             <span class="sr-only">Start UI Web</span>
           </a>
         </SectionTitle>
@@ -161,14 +161,14 @@ import SEO from "@/components/Seo/index.astro";
             href="http://web.start-ui.com/"
             class="gradient-web inline-flex w-fit items-center gap-x-1.5 rounded-md px-2.5 py-1.5 font-medium text-black shadow-sm"
           >
-            <LuGithub /> Get on GitHub
+            <Icon name="lucide:github" /> Get on GitHub
           </a>
           <a
             target="_blank"
             href="http://demo.start-ui.com/"
             class="inline-flex w-fit items-center gap-x-1.5 rounded-md bg-black px-2.5 py-1.5 font-medium text-white shadow-[0_0_60px] shadow-web-500/40 transition hover:shadow-web-500/60"
           >
-            <LuCirclePlay /> Demo
+            <Icon name="lucide:circle-play" /> Demo
           </a>
           <a
             target="_blank"
@@ -183,7 +183,7 @@ import SEO from "@/components/Seo/index.astro";
       <Section>
         <SectionTitle>
           <a target="_blank" href="http://native.start-ui.com/">
-            <LogoNative className="h-8" />
+            <LogoNative class="h-8" />
             <span class="sr-only">Start UI Native</span>
           </a>
         </SectionTitle>
@@ -249,13 +249,13 @@ import SEO from "@/components/Seo/index.astro";
           href="http://native.start-ui.com/"
           class="gradient-native inline-flex w-fit items-center gap-x-1.5 rounded-md px-2.5 py-1.5 font-medium text-black shadow-sm"
         >
-          <LuGithub /> Get on GitHub
+          <Icon name="lucide:github" /> Get on GitHub
         </a>
       </Section>
       <Section>
         <SectionTitle>
           <a target="_blank" href="http://figma.start-ui.com/">
-            <LogoFigma className="h-8" />
+            <LogoFigma class="h-8" />
             <span class="sr-only">Start UI Figma</span>
           </a>
         </SectionTitle>
@@ -280,7 +280,7 @@ import SEO from "@/components/Seo/index.astro";
           href="http://figma.start-ui.com/"
           class="gradient-figma inline-flex w-fit items-center gap-x-1.5 rounded-md px-2.5 py-1.5 font-medium text-black shadow-sm"
         >
-          <LuFigma /> Get on Figma
+          <Icon name="lucide:figma" /> Get on Figma
         </a>
       </Section>
       <Section>
@@ -350,7 +350,7 @@ import SEO from "@/components/Seo/index.astro";
             href="/talks/past"
             class="inline-flex w-fit items-center gap-x-1.5 rounded-md bg-gradient-to-r from-purple-400 to-purple-500 px-2.5 py-1.5 font-medium text-black shadow-sm md:w-fit lg:w-fit"
           >
-            <LuMicVocal />
+            <Icon name="lucide:mic-vocal" />
             Check past talks
           </a>
         </div>

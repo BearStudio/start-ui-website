@@ -1,20 +1,16 @@
 ---
 import PageContainer from "@/components/pageContainer/index.astro";
-import Section from "@/components/Section/index.astro";
-import SectionTitle from "@/components/Section/title.astro";
+import Section from "@/components/section/index.astro";
+import SectionTitle from "@/components/section/title.astro";
 import FixedSideBar from "@/components/fixedSideBar/index.astro";
-import {
-  LuArrowLeft,
-  LuCalendarDays,
-  LuMapPin,
-  LuYoutube,
-} from "react-icons/lu";
+
 import { cn } from "@/lib/utils";
 import { Image } from "astro:assets";
 import Layout from "@/layouts/Layout.astro";
 import { getTalksComputed } from "@/lib/conferences";
 import dayjs from "dayjs";
 
+import { Icon } from "astro-icon/components";
 const talks = await getTalksComputed();
 ---
 
@@ -26,7 +22,11 @@ const talks = await getTalksComputed();
         href="/"
         class="-mb-10 inline-flex w-fit items-center gap-x-1.5 rounded-md bg-gray-200 px-2.5 py-1.5 font-medium text-black shadow-sm"
       >
-        <LuArrowLeft className="-ml-0.5 h-5 w-5" aria-hidden="true" />
+        <Icon
+          name="lucide:arrow-left"
+          class="-ml-0.5 h-5 w-5"
+          aria-hidden="true"
+        />
         Back
       </a>
 
@@ -55,13 +55,13 @@ const talks = await getTalksComputed();
             </div>
             <div class="text-[#D1D5DB] prose-p:my-3">
               <div class="my-3 flex items-center gap-4 pl-2 font-thin">
-                <LuCalendarDays size={25} />
+                <Icon name="lucide:calendar-days" size={25} />
                 <time datetime={dayjs(conf.date).toISOString()}>
                   {dayjs(conf.date).format("MMMM DD, YYYY")}{" "}
                 </time>
               </div>
               <p class="flex items-center gap-4 pl-2 font-thin">
-                <LuMapPin size={25} />
+                <Icon name="lucide:map-pin" size={25} />
                 {conf.city}
               </p>
               <div class="mt-5 grid grid-cols-1 gap-8 lg:grid-cols-2">
@@ -94,8 +94,10 @@ const talks = await getTalksComputed();
                   target="_blank"
                   href={conf.vod}
                   class="gradient-youtube mt-5 inline-flex w-fit items-center gap-x-1.5 space-x-4 rounded-md px-2.5 py-1.5 font-medium text-white shadow-sm"
+                  target="_blank"
+                  rel="noreferrer"
                 >
-                  <LuYoutube /> Watch the replay
+                  <Icon name="lucide:youtube" /> Watch the replay
                 </a>
               )}
             </div>
