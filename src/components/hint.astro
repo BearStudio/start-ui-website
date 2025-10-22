@@ -1,20 +1,31 @@
----
-import { Icon } from "astro-icon/components";
----
-
-<div class="fixed left-0 right-0 top-0 z-50 bg-slate-900/40">
-  <div class="flex items-center justify-center gap-4 px-4 py-3">
-    <div
-      class="flex items-center gap-2 rounded-full border border-amber-500/30 bg-amber-500/10 px-4 py-1.5 text-web-500"
-    >
-      <Icon name="lucide:sparkles" size={18} />
-      <span class="text-sm font-medium">New</span>
-    </div>
-
-    <div class="hidden h-5 w-px bg-slate-700 sm:block"></div>
-    <p class="py-1.5 text-sm font-bold tracking-widest">
-      <span class="text-gray-200">Start UI V3 </span>
-      <span>is now available</span>
+<div class="fixed left-0 right-0 top-0 z-50 bg-slate-950/80 backdrop-blur-md">
+  <div class="flex items-center justify-center gap-4 px-4 py-2">
+    <p class="text-md py-1.5 font-medium">
+      <span aria-label="Rocket" role="img">🚀</span>
+      <span class="text-white">
+        A new version of Start UI is now available for <a
+          href="http://web.start-ui.com/"
+          target="_blank"
+          rel="noreferrer"
+          class="underline hover:no-underline">[web]</a
+        >,
+        <a
+          href="http://native.start-ui.com/"
+          target="_blank"
+          rel="noreferrer"
+          class="underline hover:no-underline"
+        >
+          [native]</a
+        > and
+        <a
+          href="http://figma.start-ui.com/"
+          target="_blank"
+          rel="noreferrer"
+          class="underline hover:no-underline"
+        >
+          [figma]
+        </a>
+      </span>
     </p>
   </div>
 </div>
