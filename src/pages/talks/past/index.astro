@@ -9,12 +9,18 @@ import { Image } from "astro:assets";
 import Layout from "@/layouts/Layout.astro";
 import { getTalksComputed } from "@/lib/conferences";
 import dayjs from "dayjs";
+import SEO from "@/components/Seo/index.astro";
 
 import { Icon } from "astro-icon/components";
 const talks = await getTalksComputed();
 ---
 
 <Layout>
+  <SEO
+    slot="name"
+    title="Past Talks & Meetups — Start UI"
+    description="Discover past talks, meetups, and tech presentations by the Start UI team, including LyonJS, BeJS, BordeauxJS and more. Watch replay videos and dive into UI-centric discussions."
+  />
   <div class="flex flex-1 flex-col lg:flex-row">
     <FixedSideBar />
     <PageContainer>
