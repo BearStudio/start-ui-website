@@ -1,36 +1,32 @@
 {
   "name": "start-ui-website",
-  "version": "0.1.0",
-  "private": true,
+  "type": "module",
+  "version": "0.0.1",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "pretty": "prettier -w ."
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/mdx": "4.3.7",
+    "@astrojs/sitemap": "3.6.0",
+    "@astrojs/tailwind": "6.0.2",
+    "@astrojs/vercel": "8.2.10",
+    "@fontsource/rubik": "5.2.8",
+    "@iconify-json/lucide": "1.2.70",
     "@tailwindcss/typography": "0.5.19",
-    "@types/node": "22.18.10",
-    "@types/react": "19.2.2",
-    "@types/react-dom": "19.2.1",
-    "@vercel/analytics": "1.5.0",
-    "autoprefixer": "10.4.21",
+    "astro": "5.14.4",
+    "astro-icon": "1.1.5",
+    "astro-robots-txt": "1.0.0",
+    "astro-seo": "0.8.4",
     "clsx": "2.1.1",
-    "eslint": "8.56.0",
-    "eslint-config-next": "15.5.4",
-    "next": "15.5.4",
-    "postcss": "8.5.6",
-    "react": "19.0.0",
-    "react-dom": "19.0.0",
-    "react-icons": "5.5.0",
-    "sharp": "0.34.4",
-    "tailwind-merge": "2.6.0",
-    "tailwindcss": "3.4.18",
-    "typescript": "5.9.3"
-  },
-  "devDependencies": {
+    "dayjs": "1.11.18",
     "prettier": "3.6.2",
-    "prettier-plugin-tailwindcss": "0.5.14"
+    "prettier-plugin-astro": "0.14.1",
+    "prettier-plugin-tailwindcss": "0.7.1",
+    "sharp": "0.34.4",
+    "tailwind-merge": "3.3.1",
+    "tailwindcss": "3.4.18"
   }
 }

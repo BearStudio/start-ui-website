@@ -1,0 +1,38 @@
+---
+import { SEO } from "astro-seo";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "Start UI - Opinionated UI starters",
+  description = "Opinionated UI starters from the BearStudio team. Made for the web, mobile applications and Figma. Free and open source, start to use them now to bootstrap your next webapps projects",
+} = Astro.props;
+
+const ogImage = new URL("/start-ui-visual", Astro.site).toString();
+---
+
+<SEO
+  title={title}
+  description={description}
+  canonical="/"
+  openGraph={{
+    basic: {
+      title: title,
+      image: ogImage,
+      url: "https://start-ui.com/",
+      type: "website",
+    },
+    optional: {
+      locale: "en_US",
+    },
+  }}
+  twitter={{
+    card: "summary_large_image",
+    site: "@startui_",
+    creator: "@startui_",
+    image: ogImage,
+  }}
+/>

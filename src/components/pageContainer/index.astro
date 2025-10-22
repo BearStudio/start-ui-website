@@ -1,0 +1,22 @@
+---
+import { Image } from "astro:assets";
+import Sticker from "@/assets/sticker.png";
+---
+
+<div class="relative z-10 flex flex-1 flex-col lg:pl-[36rem]">
+  <div class="relative flex flex-1 flex-col overflow-hidden">
+    <Image
+      src={Sticker}
+      alt="In Open Source We Trust"
+      width={200}
+      height={200}
+      sizes="200px"
+      class="absolute -bottom-8 -left-8 z-20 w-[200px] rotate-12 transition-transform hover:-translate-y-4 hover:translate-x-4 sm:max-w-[36vh]"
+    />
+    <div
+      class="mx-auto flex max-w-3xl flex-1 flex-col gap-16 px-8 pb-[200px] pt-12 lg:pt-20 xl:gap-24"
+    >
+      <slot />
+    </div>
+  </div>
+</div>

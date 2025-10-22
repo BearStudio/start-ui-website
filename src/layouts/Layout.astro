@@ -1,0 +1,22 @@
+---
+import "@/styles/globals.css";
+import "@fontsource/rubik/latin-400.css";
+import "@fontsource/rubik/latin-700.css";
+import "@fontsource/rubik/latin-500.css";
+import "@fontsource/rubik/latin-300.css";
+import Hint from "@/components/hint.astro";
+---
+
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+    <slot name="seo" />
+  </head>
+  <body class="flex min-h-screen flex-col bg-gray-950 font-rubrik text-white">
+    <Hint />
+    <slot />
+  </body>
+</html>
