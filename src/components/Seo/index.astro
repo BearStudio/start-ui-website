@@ -17,7 +17,7 @@ const ogImage = new URL("/start-ui-visual", Astro.site).toString();
 <SEO
   title={title}
   description={description}
-  canonical="/"
+  canonical={Astro.site?.toString() ?? "https://start-ui.com"}
   openGraph={{
     basic: {
       title: title,
@@ -27,6 +27,7 @@ const ogImage = new URL("/start-ui-visual", Astro.site).toString();
     },
     optional: {
       locale: "en_US",
+      description: description,
     },
   }}
   twitter={{
@@ -34,5 +35,6 @@ const ogImage = new URL("/start-ui-visual", Astro.site).toString();
     site: "@startui_",
     creator: "@startui_",
     image: ogImage,
+    description: description,
   }}
 />
